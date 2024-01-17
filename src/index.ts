@@ -1,6 +1,6 @@
 import img from './assests/svg/set-up-svgrepo-com.svg';
+import housePng from './assests/img/house.png';
 console.log('ok!');
-console.log(img);
 
 
 function component() {
@@ -9,8 +9,11 @@ function component() {
   element.innerHTML = 'Hello, webpack';
   const image = new Image();
   image.src = img;
+
+  const houseImg = new Image();
+  houseImg.src = housePng;
   
-  element.append(image);
+  element.append(image, houseImg);
 
   return element;
 }
