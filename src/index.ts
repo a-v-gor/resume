@@ -4,7 +4,6 @@ import './assests/scss/style.scss';
 
 console.log('ok!');
 
-
 function component() {
   const element = document.createElement('div');
 
@@ -17,7 +16,7 @@ function component() {
 
   image.classList.add('img');
   houseImg.classList.add('img');
-  
+
   element.append(image, houseImg);
 
   return element;
