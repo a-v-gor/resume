@@ -13,6 +13,10 @@
   "plugins": [
     "@typescript-eslint"
   ],
+  "ignorePatterns": [
+    "webpack.config.js",
+    "custom.d.ts"
+  ],
   "rules": {
     "@typescript-eslint/strict-boolean-expressions": [
       2,

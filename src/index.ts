@@ -4,6 +4,16 @@ import './assests/scss/style.scss';
 
 console.log('ok!');
 
+let a: any;
+a = 1;
+a = '1';
+console.log(a);
+let b;
+b = 1;
+b = '1';
+console.log(b);
+
+
 function component() {
   const element = document.createElement('div');
 
