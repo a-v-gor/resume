@@ -25,6 +25,7 @@
     "sass": "^1.69.7",
     "sass-loader": "^14.0.0",
     "stylelint": "^16.1.0",
+    "stylelint-config-htmlacademy": "^4.0.3",
     "stylelint-config-standard-scss": "^13.0.0",
     "stylelint-order": "^6.0.4",
     "stylelint-order-htmlacademy": "2.1.0",
