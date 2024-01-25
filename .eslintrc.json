@@ -8,11 +8,19 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-type-checked"
+    "plugin:@typescript-eslint/recommended-type-checked",
+    "prettier"
   ],
   "ignorePatterns": [
-    "webpack.config.js",
-    "custom.d.ts"
+    "dist",
+    "node_modules",
+    ".vscode",
+    ".stylelintrc.json",
+    "custom.d.ts",
+    "package.json",
+    "package-lock.json",
+    "tsconfig.json",
+    "webpack.config.js"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
