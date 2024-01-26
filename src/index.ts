@@ -4,10 +4,10 @@ import './assests/scss/style.scss';
 
 console.log('ok!');
 
-let a: any;
-a = 1;
-a = '1';
-console.log(a);
+// let a: any;
+// a = 1;
+// a = '1';
+// console.log(a);
 
 let b;
 b = 1;
