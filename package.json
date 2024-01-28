@@ -11,7 +11,9 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.ts": "eslint --fix"
+    "*.scss": "stylelint --syntax=scss",
+    "*.ts": "eslint --fix",
+    "*": "prettier --ignore-unknown --write"
   },
   "keywords": [],
   "author": "",
