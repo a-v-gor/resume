@@ -11,14 +11,13 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.scss": "stylelint --syntax=scss",
+    "*.scss": "stylelint",
     "*.ts": "eslint --fix",
     "*": "prettier --ignore-unknown --write"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.19.0",
     "@typescript-eslint/parser": "^6.19.0",

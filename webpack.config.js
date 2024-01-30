@@ -40,6 +40,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Development',
+      favicon: './src/assets/favicon.ico'
     }),
     new MiniCssExtractPlugin(),
     new StylelintPlugin(),
