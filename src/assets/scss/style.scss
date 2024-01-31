@@ -1,3 +1,32 @@
-body {
-  background: #008000;
+@import 'reset';
+
+.body__title,
+.section__title,
+.contacts__title {
+  display: none;
+}
+
+.header {
+  height: 100vh;
+}
+
+.body {
+  background: #fff8dc;
+}
+
+.background {
+  background-image: linear-gradient(to right, #ffffff 50%, #000000 50%);
+}
+
+.wrapper {
+  width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #00ffff;
+}
+
+.block {
+  width: 120px;
+  height: 120px;
+  background-color: #0000ff;
 }
