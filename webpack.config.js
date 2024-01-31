@@ -28,6 +28,10 @@ module.exports = {
           "sass-loader",
         ],
       },
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+      }
     ],
   },
   resolve: {
