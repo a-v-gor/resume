@@ -1,8 +1,13 @@
 @import "reset";
 @import "fonts";
 
+$hr-color: #ececec;
 $main-text-color: #939393;
-$lname-color: #f8bb10;
+$mark-color: #f8bb10;
+$section-odd-head-backgrnd: #fbfbfb;
+$section-odd-descript-backgrnd: #ffffff;
+$socials-color: #ededed;
+$title-color: #727272;
 $font: "Lato", "Arial", "Helvetica", sans-serif;
 
 .body {
@@ -31,7 +36,18 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   &__wrapper {
     display: flex;
     width: fit-content;
+    max-width: 127.6rem;
     margin: 0 auto;
+  }
+}
+
+.section-odd {
+  &__header {
+    background-color: $section-odd-head-backgrnd;
+  }
+
+  &__description {
+    background-color: $section-odd-descript-backgrnd;
   }
 }
 
@@ -56,11 +72,12 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   &__descr-wrapper {
     display: flex;
     flex-wrap: wrap;
-  }
+    justify-content: space-between;
+    height: 100%;
 
-  &__contacts {
-    display: flex;
-    width: 100%;
+    & > * {
+      align-self: end;
+    }
   }
 
   &__name {
@@ -74,7 +91,7 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
 
   &__lname {
     font-weight: 700;
-    color: $lname-color;
+    color: $mark-color;
   }
 
   &__position {
@@ -82,7 +99,54 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   }
 }
 
-// Make element visioble
+.socials {
+  display: flex;
+  column-gap: 0.6rem;
+
+  &__icon-wrapper {
+    width: 3.8rem;
+    height: 3.8rem;
+    background-color: $socials-color;
+    border: 0.2rem solid $socials-color;
+    border-radius: 0.3rem;
+
+    &:hover {
+      background: transparent;
+
+      .socials__icon {
+        filter: invert(86%) sepia(12%) saturate(3658%) hue-rotate(344deg) brightness(95%) contrast(104%);
+      }
+    }
+  }
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+    filter: invert(72%) sepia(14%) saturate(0%) hue-rotate(148deg) brightness(107%) contrast(93%);
+    transition: 0;
+  }
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 2.7rem;
+  border-top: 0.2rem solid $hr-color;
+}
+
+.contact {
+  &__title,
+  &__descr {
+    font-size: 1.4em;
+  }
+
+  &__title {
+    color: $title-color;
+  }
+}
+
+// Make element visible
 
 
 // &__fname {
