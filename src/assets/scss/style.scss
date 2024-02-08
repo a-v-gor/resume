@@ -7,7 +7,6 @@ $mark-color: #f8bb10;
 $section-odd-head-backgrnd: #fbfbfb;
 $section-odd-descript-backgrnd: #ffffff;
 $socials-color: #ededed;
-$socials-icon-color: #c6c6c6;
 $title-color: #727272;
 $font: "Lato", "Arial", "Helvetica", sans-serif;
 
@@ -26,10 +25,6 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
 .section {
   width: 100%;
 
-  &__block {
-    padding: 6.13rem 7.35rem 2.23rem;
-  }
-
   &__odd {
     background-image: linear-gradient(to right, #fbfbfb 50%, #ffffff  50%);
   }
@@ -37,8 +32,31 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   &__wrapper {
     display: flex;
     width: fit-content;
-    max-width: 127.6rem;
     margin: 0 auto;
+  }
+
+  &__header {
+    width: 30%;
+  }
+
+  &__description {
+    width: 70%;
+  }
+
+  @media (width >= 1200px) {
+    &__block {
+      padding: 6.13rem 7.35rem 2.23rem;
+    }
+
+    &__wrapper {
+      max-width: 127.6rem;
+    }
+  }
+
+  @media (width <= 1199px) {
+    &__block {
+      padding: 4.41rem 4.9rem 0;
+    }
   }
 }
 
@@ -54,6 +72,7 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
 
 .header {
   &__wrapper {
+    width: 100%;
     height: 100vh;
   }
 
@@ -61,13 +80,13 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-end;
     padding-bottom: 11.7rem;
   }
 
   &__photo {
-    width: 19vw;
-    max-width: 23.58rem;
-    height: fit-content;
+    height: auto;
+    object-fit: contain;
     border-radius: 50%;
   }
 
@@ -87,7 +106,6 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   }
 
   &__name {
-    font-size: 6.72em;
     line-height: 0.9;
   }
 
@@ -104,7 +122,49 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   &__position {
     padding: 2.5rem 0.4rem;
     font-weight: 300;
-    font-size: 2.1em;
+  }
+
+  @media (width >= 1200px) {
+    &__header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 35%;
+      min-width: 35.49rem;
+      max-width: 38.28rem;
+      padding-bottom: 11.7rem;
+    }
+
+    &__photo {
+      width: 100%;
+      max-width: 23.58rem;
+    }
+
+    &__name {
+      font-size: 6.72em;
+    }
+
+    &__position {
+      font-size: 2.1em;
+    }
+  }
+
+  @media (width <= 1199px) {
+    &__header {
+      max-width: 35.97rem;
+    }
+
+    &__photo {
+      width: 19.6rem;
+    }
+
+    &__name {
+      font-size: 4.37em;
+    }
+
+    &__position {
+      font-size: 1.35em;
+    }
   }
 }
 
@@ -113,24 +173,54 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   padding-bottom: 2.5rem;
   column-gap: 0.6rem;
 
-  &__icon-wrapper {
-    width: 3.8rem;
-    height: 3.8rem;
+  &__icon {
     background-color: $socials-color;
+    background-position: center;
+    background-size: contain;
     border: 0.2rem solid $socials-color;
     border-radius: 0.3rem;
 
     &:hover {
-      background: transparent;
-
-      .socials__icon {
-        fill: $mark-color;
-      }
+      background-color: transparent;
     }
   }
 
-  &__icon {
-    fill: $socials-icon-color;
+  &__icon-facebook {
+    background-image: url("../svg/icon-facebook.svg");
+
+    &:hover {
+      background-image: url("../svg/icon-facebook-active.svg");
+    }
+  }
+
+  &__icon-dribbble {
+    background-image: url("../svg/icon-dribbble.svg");
+
+    &:hover {
+      background-image: url("../svg/icon-dribbble-active.svg");
+    }
+  }
+
+  &__icon-twitter {
+    background-image: url("../svg/icon-twitter.svg");
+
+    &:hover {
+      background-image: url("../svg/icon-twitter-active.svg");
+    }
+  }
+
+  @media (width >= 1200px) {
+    &__icon {
+      width: 3.8rem;
+      height: 3.8rem;
+    }
+  }
+
+  @media (width <= 1199px) {
+    &__icon {
+      width: 3.3rem;
+      height: 3.3rem;
+    }
   }
 }
 
@@ -183,20 +273,3 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
 // }
 
 // own
-
-.background {
-  background-image: linear-gradient(to right, #ffffff 50%, #000000 50%);
-}
-
-.wrapper {
-  width: 400px;
-  margin: 0 auto;
-  padding: 10px;
-  background-color: #00ffff;
-}
-
-.block {
-  width: 120px;
-  height: 120px;
-  background-color: #0000ff;
-}
