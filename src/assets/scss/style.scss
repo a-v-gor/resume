@@ -61,11 +61,12 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-bottom: 11.7rem;
   }
 
   &__photo {
     width: 19vw;
-    max-width: 23.32rem;
+    max-width: 23.58rem;
     height: fit-content;
     border-radius: 50%;
   }
@@ -81,8 +82,13 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
     }
   }
 
+  &__descr-text {
+    padding-top: 4.3rem;
+  }
+
   &__name {
     font-size: 6.72em;
+    line-height: 0.9;
   }
 
   &__fname {
@@ -96,12 +102,15 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   }
 
   &__position {
+    padding: 2.5rem 0.4rem;
+    font-weight: 300;
     font-size: 2.1em;
   }
 }
 
 .socials {
   display: flex;
+  padding-bottom: 2.5rem;
   column-gap: 0.6rem;
 
   &__icon-wrapper {
@@ -129,7 +138,7 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding-top: 2.7rem;
+  padding: 2.7rem 0 4.4rem;
   border-top: 0.2rem solid $hr-color;
 }
 
@@ -140,7 +149,18 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   }
 
   &__title {
+    padding-bottom: 1.5rem;
     color: $title-color;
+  }
+
+  &__link {
+    font-weight: 400;
+    color: $main-text-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $mark-color;
+    }
   }
 }
 
