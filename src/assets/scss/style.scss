@@ -7,6 +7,7 @@ $mark-color: #f8bb10;
 $section-odd-head-backgrnd: #fbfbfb;
 $section-odd-descript-backgrnd: #ffffff;
 $socials-color: #ededed;
+$socials-icon-color: #c6c6c6;
 $title-color: #727272;
 $font: "Lato", "Arial", "Helvetica", sans-serif;
 
@@ -114,16 +115,13 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
       background: transparent;
 
       .socials__icon {
-        filter: invert(86%) sepia(12%) saturate(3658%) hue-rotate(344deg) brightness(95%) contrast(104%);
+        fill: $mark-color;
       }
     }
   }
 
   &__icon {
-    width: 100%;
-    height: 100%;
-    filter: invert(72%) sepia(14%) saturate(0%) hue-rotate(148deg) brightness(107%) contrast(93%);
-    transition: 0;
+    fill: $socials-icon-color;
   }
 }
 
