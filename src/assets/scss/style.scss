@@ -58,6 +58,21 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
       padding: 4.41rem 4.9rem 0;
     }
   }
+
+  @media (width <= 1023px) {
+    &__wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__odd {
+      background-image: none;
+    }
+
+    &__block {
+      padding: 4.41rem 4.9rem 1.96rem;
+    }
+  }
 }
 
 .section-odd {
@@ -156,6 +171,7 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
 
     &__photo {
       width: 19.6rem;
+      margin: 0 auto;
     }
 
     &__name {
@@ -163,7 +179,46 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
     }
 
     &__position {
-      font-size: 1.35em;
+      font-size: 1.36em;
+    }
+
+    &__descr-text {
+      padding-top: 4.6rem;
+    }
+  }
+
+  @media (width <= 1023px) {
+    &__header {
+      width: 100%;
+      max-width: unset;
+      padding-bottom: 0;
+      background-color: transparent;
+    }
+
+    &__wrapper {
+      height: auto;
+    }
+
+    &__descr-wrapper {
+      flex-direction: column;
+
+      & > * {
+        align-self: center;
+      }
+    }
+
+    &__description {
+      width: 100%;
+      padding-top: 2.45rem;
+    }
+
+    &__descr-text {
+      padding-top: 0;
+      text-align: center;
+    }
+
+    &__position {
+      padding: 2.3rem 0 3.1rem;
     }
   }
 }
@@ -230,6 +285,10 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   width: 100%;
   padding: 2.7rem 0 4.4rem;
   border-top: 0.2rem solid $hr-color;
+
+  @media (width <= 1199px) {
+    padding-bottom: 4.9rem;
+  }
 }
 
 .contact {
