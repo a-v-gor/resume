@@ -73,6 +73,12 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
       padding: 4.41rem 4.9rem 1.96rem;
     }
   }
+
+  @media (width <= 759px) {
+    &__block {
+      padding: 2.45rem 2.45rem 0;
+    }
+  }
 }
 
 .section-odd {
@@ -221,6 +227,20 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
       padding: 2.3rem 0 3.1rem;
     }
   }
+
+  @media (width <= 759px) {
+    &__photo {
+      width: 15.4rem;
+    }
+
+    &__name {
+      line-height: 0.92;
+    }
+
+    &__position {
+      padding-top: 2.1rem;
+    }
+  }
 }
 
 .socials {
@@ -288,6 +308,22 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
 
   @media (width <= 1199px) {
     padding-bottom: 4.9rem;
+  }
+
+  @media (width <= 759px) {
+    flex-wrap: wrap;
+    gap: 3.3rem 1vw;
+
+    &__contact {
+      width: 46%;
+      text-align: center;
+    }
+  }
+
+  @media (width <= 599px) {
+    &__contact {
+      width: 100%;
+    }
   }
 }
 
