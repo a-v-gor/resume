@@ -1,9 +1,11 @@
 @import "reset";
 @import "fonts";
 
+$active-link: #e0a707;
 $hr-color: #ececec;
 $main-text-color: #939393;
 $mark-color: #f8bb10;
+$section-even-head-backgrnd: #f8f8f8;
 $section-odd-head-backgrnd: #fbfbfb;
 $section-odd-descript-backgrnd: #ffffff;
 $socials-color: #ededed;
@@ -22,16 +24,22 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   display: none;
 }
 
-.section {
-  width: 100%;
+.title {
+  font-size: 1.68em;
+  color: $title-color;
+}
 
-  &__odd {
-    background-image: linear-gradient(to right, #fbfbfb 50%, #ffffff  50%);
+.section {
+  &_odd {
+    background-image: linear-gradient(to right, $section-odd-head-backgrnd 50%, $section-odd-descript-backgrnd  50%);
+  }
+
+  &_even {
+    background-image: linear-gradient(to left, $section-odd-head-backgrnd 50%, $section-even-head-backgrnd  50%);
   }
 
   &__wrapper {
     display: flex;
-    width: fit-content;
     margin: 0 auto;
   }
 
@@ -45,7 +53,7 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
 
   @media (width >= 1200px) {
     &__block {
-      padding: 6.13rem 7.35rem 2.23rem;
+      padding: 6.13rem 7.35rem 4.2rem;
     }
 
     &__wrapper {
@@ -55,7 +63,7 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
 
   @media (width <= 1199px) {
     &__block {
-      padding: 4.41rem 4.9rem 0;
+      padding: 4.41rem 4.9rem 2.4rem;
     }
   }
 
@@ -91,9 +99,18 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   }
 }
 
+.section-even {
+  &__header {
+    background-color: $section-even-head-backgrnd;
+  }
+
+  &__description {
+    background-color: $section-odd-head-backgrnd;
+  }
+}
+
 .header {
   &__wrapper {
-    width: 100%;
     height: 100vh;
   }
 
@@ -146,6 +163,10 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   }
 
   @media (width >= 1200px) {
+    &__description {
+      padding-bottom: 2.2rem;
+    }
+
     &__header {
       display: flex;
       flex-direction: column;
@@ -171,13 +192,16 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   }
 
   @media (width <= 1199px) {
+    &__description {
+      padding-bottom: 0;
+    }
+
     &__header {
       max-width: 35.97rem;
     }
 
     &__photo {
       width: 19.6rem;
-      margin: 0 auto;
     }
 
     &__name {
@@ -194,6 +218,10 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   }
 
   @media (width <= 1023px) {
+    &__photo {
+      margin: 0 auto;
+    }
+
     &__header {
       width: 100%;
       max-width: unset;
@@ -335,7 +363,6 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
 
   &__title {
     padding-bottom: 1.5rem;
-    color: $title-color;
   }
 
   &__link {
@@ -345,6 +372,32 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
 
     &:hover {
       color: $mark-color;
+    }
+  }
+}
+
+.article {
+  &__header {
+    text-align: right;
+  }
+
+  &__subtitle {
+    padding-top: 1em;
+    font-size: 1.4em;
+  }
+
+  &__text {
+    padding-bottom: 1.93rem;
+    font-size: 1.71em;
+    line-height: 1.75;
+  }
+
+  &__link {
+    color: $mark-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $active-link;
     }
   }
 }
