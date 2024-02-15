@@ -73,18 +73,33 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
       align-items: center;
     }
 
-    &__odd {
-      background-image: none;
-    }
-
     &__block {
       padding: 4.41rem 4.9rem 1.96rem;
+    }
+
+    &__header {
+      width: 100%;
+      padding-bottom: 4.9rem;
+      border-top: 1px solid $hr-color;
+      border-bottom: 1px solid $hr-color;
+    }
+
+    &__description {
+      width: 100%;
+    }
+
+    &__odd {
+      background-image: none;
     }
   }
 
   @media (width <= 759px) {
     &__block {
       padding: 2.45rem 2.45rem 0;
+    }
+
+    &__header {
+      padding-bottom: 2.8rem;
     }
   }
 }
@@ -223,10 +238,10 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
     }
 
     &__header {
-      width: 100%;
       max-width: unset;
       padding-bottom: 0;
-      background-color: transparent;
+      background-color: $section-odd-descript-backgrnd;
+      border: unset;
     }
 
     &__wrapper {
@@ -340,6 +355,7 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
 
   @media (width <= 759px) {
     flex-wrap: wrap;
+    padding-bottom: 2.9rem;
     gap: 3.3rem 1vw;
 
     &__contact {
@@ -387,7 +403,7 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   }
 
   &__text {
-    padding-bottom: 1.93rem;
+    padding-bottom: 1.1em;
     font-size: 1.71em;
     line-height: 1.75;
   }
@@ -398,6 +414,18 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
 
     &:hover {
       color: $active-link;
+    }
+  }
+
+  @media (width <= 1023px) {
+    &__header {
+      text-align: inherit;
+    }
+  }
+
+  @media (width <= 599px) {
+    &__text {
+      font-size: 1.4em;
     }
   }
 }
