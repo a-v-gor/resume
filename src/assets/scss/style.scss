@@ -5,10 +5,11 @@ $active-link: #e0a707;
 $hr-color: #ececec;
 $main-text-color: #939393;
 $mark-color: #f8bb10;
-$section-even-descript-backgrnd: #ffffff;
-$section-even-head-backgrnd: #fbfbfb;
-$section-odd-descript-backgrnd: #fcfcfc;
-$section-odd-head-backgrnd: #f8f8f8;
+$section-even-descript-backgrnd-color: #ffffff;
+$section-even-head-backgrnd-color: #fbfbfb;
+$section-odd-descript-backgrnd-color: #fcfcfc;
+$section-odd-head-backgrnd-color: #f8f8f8;
+$section-odd-head-backgrnd-mob-color: #fafafa;
 $socials-color: #ededed;
 $title-color: #727272;
 $font: "Lato", "Arial", "Helvetica", sans-serif;
@@ -45,26 +46,30 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   }
 
   &:nth-child(even) {
-    background-image: linear-gradient(to left, $section-odd-head-backgrnd 50%, $section-even-head-backgrnd  50%);
+    background-image: linear-gradient(to left, $section-odd-head-backgrnd-color 50%, $section-even-head-backgrnd-color  50%);
 
-    & .section__description {
-      background-color: $section-even-descript-backgrnd;
-    }
+    @media (width > 1023px) {
+      & .section__description {
+        background-color: $section-even-descript-backgrnd-color;
+      }
 
-    & .section__header {
-      background-color: $section-even-head-backgrnd;
+      & .section__header {
+        background-color: $section-even-head-backgrnd-color;
+      }
     }
   }
 
   &:nth-child(odd) {
-    background-image: linear-gradient(to right, $section-odd-head-backgrnd 50%, $section-odd-descript-backgrnd  50%);
+    background-image: linear-gradient(to right, $section-odd-head-backgrnd-color 50%, $section-odd-descript-backgrnd-color 50%);
 
-    & .section__description {
-      background-color: $section-odd-descript-backgrnd;
-    }
+    @media (width > 1023px) {
+      & .section__description {
+        background-color: $section-odd-descript-backgrnd-color;
+      }
 
-    & .section__header {
-      background-color: $section-odd-head-backgrnd;
+      & .section__header {
+        background-color: $section-odd-head-backgrnd-color;
+      }
     }
   }
 
@@ -90,40 +95,28 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
       align-items: center;
     }
 
-    &__block {
-      padding: 4.41rem 4.9rem 1.96rem;
-    }
-
     &__header {
       width: 100%;
       padding-bottom: 4.9rem;
+      background-color: $section-odd-head-backgrnd-mob-color;
       border-top: 1px solid $hr-color;
       border-bottom: 1px solid $hr-color;
     }
 
     &__description {
       width: 100%;
-    }
-
-    &:nth-child(odd) {
-      background-image: none;
+      background-color: $section-even-descript-backgrnd-color;
     }
   }
 
   @media (width <= 759px) {
     &__block {
-      padding: 2.45rem 2.45rem 0;
+      padding: 2.5rem;
     }
 
     &__header {
       padding-bottom: 2.8rem;
     }
-  }
-}
-
-.section-odd {
-  &__description {
-    background-color: $section-odd-descript-backgrnd;
   }
 }
 
@@ -243,7 +236,7 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
     &__header {
       max-width: unset;
       padding-bottom: 0;
-      background-color: $section-odd-descript-backgrnd;
+      background-color: $section-even-descript-backgrnd-color;
       border: unset;
     }
 
@@ -280,7 +273,7 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
     }
 
     &__name {
-      line-height: 0.92;
+      line-height: 0.91;
     }
 
     &__position {
@@ -359,7 +352,7 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   @media (width <= 759px) {
     flex-wrap: wrap;
     padding-bottom: 2.9rem;
-    gap: 3.3rem 1vw;
+    gap: 3.25rem 1vw;
 
     &__contact {
       width: 46%;
@@ -401,7 +394,7 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   }
 
   &__subtitle {
-    padding-top: 1em;
+    padding-top: 1.4rem;
     font-size: 1.4em;
   }
 
@@ -446,6 +439,15 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   @media (width <= 1199px) {
     row-gap: 2.5rem;
   }
+
+  @media (width <= 1023px) {
+    row-gap: 2.43rem;
+  }
+
+  @media (width <= 599px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .list__item {
@@ -475,6 +477,10 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
 .ord-list__text {
   font-size: 1.4em;
   line-height: 1.75;
+
+  @media (width <= 759px) {
+    letter-spacing: calc(-0.15em / 100);
+  }
 }
 
 // Make element visible
