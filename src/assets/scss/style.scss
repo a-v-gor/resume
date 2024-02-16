@@ -53,7 +53,7 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
 
   @media (width >= 1200px) {
     &__block {
-      padding: 6.13rem 7.35rem 4.2rem;
+      padding: 6.13rem 7.35rem 6.1rem;
     }
 
     &__wrapper {
@@ -403,9 +403,12 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   }
 
   &__text {
-    padding-bottom: 1.1em;
     font-size: 1.71em;
     line-height: 1.75;
+
+    &:not(:nth-last-child(1)) {
+      padding-bottom: 1.1em;
+    }
   }
 
   &__link {
@@ -428,6 +431,48 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
       font-size: 1.4em;
     }
   }
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.8rem 4.9rem;
+}
+
+.ord-list {
+  list-style-type: none;
+  counter-reset: item;
+}
+
+.list__item {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: max-content auto;
+  width: 100%;
+  max-width: 34.86rem;
+  line-height: 1.7;
+  column-gap: 2rem;
+}
+
+.ord-list__item::before {
+  content: "0" counter(item);
+  grid-row: 1 / 3;
+  font-weight: 600;
+  font-size: 1.68em;
+  line-height: 1.45;
+  color: $mark-color;
+  counter-increment: item;
+}
+
+.ord-list__title {
+  padding-bottom: 0.77rem;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+.ord-list__text {
+  font-size: 1.4em;
+  line-height: 1.75;
 }
 
 // Make element visible
