@@ -5,9 +5,10 @@ $active-link: #e0a707;
 $hr-color: #ececec;
 $main-text-color: #939393;
 $mark-color: #f8bb10;
-$section-even-head-backgrnd: #f8f8f8;
-$section-odd-head-backgrnd: #fbfbfb;
-$section-odd-descript-backgrnd: #ffffff;
+$section-even-descript-backgrnd: #ffffff;
+$section-even-head-backgrnd: #fbfbfb;
+$section-odd-descript-backgrnd: #fcfcfc;
+$section-odd-head-backgrnd: #f8f8f8;
 $socials-color: #ededed;
 $title-color: #727272;
 $font: "Lato", "Arial", "Helvetica", sans-serif;
@@ -30,14 +31,6 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
 }
 
 .section {
-  &_odd {
-    background-image: linear-gradient(to right, $section-odd-head-backgrnd 50%, $section-odd-descript-backgrnd  50%);
-  }
-
-  &_even {
-    background-image: linear-gradient(to left, $section-odd-head-backgrnd 50%, $section-even-head-backgrnd  50%);
-  }
-
   &__wrapper {
     display: flex;
     margin: 0 auto;
@@ -49,6 +42,30 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
 
   &__description {
     width: 70%;
+  }
+
+  &:nth-child(even) {
+    background-image: linear-gradient(to left, $section-odd-head-backgrnd 50%, $section-even-head-backgrnd  50%);
+
+    & .section__description {
+      background-color: $section-even-descript-backgrnd;
+    }
+
+    & .section__header {
+      background-color: $section-even-head-backgrnd;
+    }
+  }
+
+  &:nth-child(odd) {
+    background-image: linear-gradient(to right, $section-odd-head-backgrnd 50%, $section-odd-descript-backgrnd  50%);
+
+    & .section__description {
+      background-color: $section-odd-descript-backgrnd;
+    }
+
+    & .section__header {
+      background-color: $section-odd-head-backgrnd;
+    }
   }
 
   @media (width >= 1200px) {
@@ -63,7 +80,7 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
 
   @media (width <= 1199px) {
     &__block {
-      padding: 4.41rem 4.9rem 2.4rem;
+      padding: 4.41rem 4.9rem 4.4rem;
     }
   }
 
@@ -88,7 +105,7 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
       width: 100%;
     }
 
-    &__odd {
+    &:nth-child(odd) {
       background-image: none;
     }
   }
@@ -105,22 +122,8 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
 }
 
 .section-odd {
-  &__header {
-    background-color: $section-odd-head-backgrnd;
-  }
-
   &__description {
     background-color: $section-odd-descript-backgrnd;
-  }
-}
-
-.section-even {
-  &__header {
-    background-color: $section-even-head-backgrnd;
-  }
-
-  &__description {
-    background-color: $section-odd-head-backgrnd;
   }
 }
 
@@ -433,23 +436,22 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   }
 }
 
-.list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3.8rem 4.9rem;
-}
-
 .ord-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   list-style-type: none;
   counter-reset: item;
+  gap: 3.8rem 4.9rem;
+
+  @media (width <= 1199px) {
+    row-gap: 2.5rem;
+  }
 }
 
 .list__item {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: max-content auto;
-  width: 100%;
-  max-width: 34.86rem;
   line-height: 1.7;
   column-gap: 2rem;
 }
