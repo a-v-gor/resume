@@ -483,6 +483,10 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   }
 }
 
+.list__progress::before {
+  content: attr(value);
+}
+
 // Make element visible
 
 
