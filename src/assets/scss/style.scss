@@ -429,12 +429,18 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   }
 }
 
-.ord-list {
+.list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  list-style-type: none;
-  counter-reset: item;
   gap: 3.8rem 4.9rem;
+
+  &__item {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: max-content auto;
+    line-height: 1.7;
+    column-gap: 2rem;
+  }
 
   @media (width <= 1199px) {
     row-gap: 2.5rem;
@@ -450,12 +456,9 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   }
 }
 
-.list__item {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: max-content auto;
-  line-height: 1.7;
-  column-gap: 2rem;
+.ord-list {
+  list-style-type: none;
+  counter-reset: item;
 }
 
 .ord-list__item::before {
@@ -483,9 +486,36 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   }
 }
 
-.list__progress::before {
-  content: attr(value);
+.item {
+  &__percent {
+    font-weight: 600;
+    font-size: 1.68em;
+    color: $mark-color;
+
+    &::after {
+      content: "%";
+      font-weight: 400;
+      font-size: 0.7em;
+    }
+  }
+
+  &__label {
+    font-weight: 600;
+    font-size: 1.68em;
+    color: $title-color;
+  }
+
+  &__progress {
+    grid-area: 2 / 1 / 3 / 3;
+    width: 100%;
+    height: 0.5rem;
+
+    &[value] {
+      --color: #e0a707;
+    }
+  }
 }
+
 
 // Make element visible
 
