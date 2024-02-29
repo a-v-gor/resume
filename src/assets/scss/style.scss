@@ -446,10 +446,24 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
 
   @media (width <= 1199px) {
     row-gap: 2.5rem;
+
+    &__item {
+      line-height: 1.87;
+    }
   }
 
   @media (width <= 1023px) {
     row-gap: 2.43rem;
+
+    &__item {
+      line-height: 1.9;
+    }
+  }
+
+  @media (width <= 759px) {
+    &__item {
+      line-height: 1.92;
+    }
   }
 
   @media (width <= 599px) {
