@@ -64,25 +64,25 @@
     </header>
     <main class="main">
       <div class="section">
-        <article class="section__wrapper article">
-          <div class="section__header section__block article__header">
-            <h2 class="article__title title">Intro</h2>
-            <p class="article__subtitle">What I am all about.</p>
+        <article class="section__wrapper article-block">
+          <div class="section__header section__block article-block__header">
+            <h2 class="article-block__title title">Intro</h2>
+            <p class="article-block__subtitle">What I am all about.</p>
           </div>
           <div class="section__description section__block">
-            <p class="article__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed <a href="#" class="article__link">pretium</a>, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Nulla vitae mauris non felis mollis faucibus.</p>
-            <p class="article__text">Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna. Fusce lacinia arcu et nulla. Nulla vitae mauris non felis mollis.</p>
+            <p class="article-block__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed <a href="#" class="article-block__link">pretium</a>, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Nulla vitae mauris non felis mollis faucibus.</p>
+            <p class="article-block__text">Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna. Fusce lacinia arcu et nulla. Nulla vitae mauris non felis mollis.</p>
           </div>
         </article>
       </div>
       <div class="section">
-        <section class="section__wrapper article">
-          <div class="section__header section__block article__header">
-            <h2 class="article__title title">Expertise</h2>
-            <p class="article__subtitle">Batman would be jealous.</p>
+        <section class="section__wrapper article-block">
+          <div class="section__header section__block article-block__header">
+            <h2 class="article-block__title title">Expertise</h2>
+            <p class="article-block__subtitle">Batman would be jealous.</p>
           </div>
           <div class="section__description section__block">
-            <ol class="article__ol ord-list list">
+            <ol class="article-block__ol ord-list list">
               <li class="ord-list__item list__item">
                 <article class="list__article">
                   <h3 class="ord-list__title title">Advanced CSS</h3>
@@ -176,22 +176,55 @@
         </article>
       </div>
       <div class="section">
-        <article class="section__wrapper article">
-          <div class="section__header section__block article__header">
-            <h2 class="article__title title">Experience</h2>
-            <p class="article__subtitle">Yes. I've been around.</p>
+        <section class="section__wrapper article-block">
+          <div class="section__header section__block article-block__header">
+            <h2 class="article-block__title title">Experience</h2>
+            <p class="article-block__subtitle">Yes. I've been around.</p>
           </div>
           <div class="section__description section__block">
-            <ul class="article__ul unord-list list">
-              <li class="unord-list__item list__item">
-                <article class="list__article">
-                  <h3 class="ord-list__title title">Advanced CSS</h3>
-                  <p class="ord-list__text">Cras ornare tristique elit lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id.</p>
+            <ul class="article-block__ul unord-list list experience-ul">
+              <li class="unord-list__item list__item experience-ul__item">
+                <article class="list__article article-li">
+                  <div class="article-li__header">
+                    <h3 class="article-li__title title">Unicorn Incubator Inc.</h3>
+                    <p class="article-li__period">2015 – Present</p>
+                    <p class="article-li__position">Senior Interface Designer</p>
+                    <p class="article-li__location">Portland, OR</p>
+                  </div>
+                  <div class="article-li__body">
+                    <p class="article-li__text">Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</p>
+                  </div>
+                </article>
+              </li>
+              <li class="unord-list__item list__item experience-ul__item">
+                <article class="list__article article-li">
+                  <div class="article-li__header">
+                    <h3 class="article-li__title title">California Design Bureau</h3>
+                    <p class="article-li__period">2013 – 2015</p>
+                    <p class="article-li__position">Creative Director</p>
+                    <p class="article-li__location">Cupertino, CA</p>
+                  </div>
+                  <div class="article-li__body">
+                    <p class="article-li__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis.</p>
+                  </div>
+                </article>
+              </li>
+              <li class="unord-list__item list__item experience-ul__item">
+                <article class="list__article article-li">
+                  <div class="article-li__header">
+                    <h3 class="article-li__title title">Dreamland Creative</h3>
+                    <p class="article-li__period">2010 – 2013</p>
+                    <p class="article-li__position">Front-end Designer</p>
+                    <p class="article-li__location">New York, NY</p>
+                  </div>
+                  <div class="article-li__body">
+                    <p class="article-li__text">Fusce lacinia arcu et nulla. Nulla vitae mauris non felis mollis faucibus. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh.</p>
+                  </div>
                 </article>
               </li>
             </ul>
           </div>
-        </article>
+        </section>
       </div>
     </main>
     <footer class="footer"></footer>

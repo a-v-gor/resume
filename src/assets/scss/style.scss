@@ -390,7 +390,7 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
   }
 }
 
-.article {
+.article-block {
   &__header {
     text-align: right;
   }
@@ -542,6 +542,20 @@ $font: "Lato", "Arial", "Helvetica", sans-serif;
 .unord-list {
   position: relative;
   bottom: 0.4rem;
+}
+
+.experience-ul {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    display: block;
+  }
+}
+
+.article-li {
+  display: flex;
+  column-gap: 4.9rem;
 }
 
 // Make element visible
