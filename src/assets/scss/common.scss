@@ -1,0 +1,223 @@
+@import "variables";
+
+.body {
+  line-height: 1.75;
+  font-family: $font;
+  color: $main-text-color;
+}
+
+.body__title,
+.section__title,
+.contacts__title,
+.socials__title {
+  display: none;
+}
+
+.title {
+  font-size: 1.68em;
+  line-height: 1.45;
+  color: $title-color;
+  text-transform: uppercase;
+}
+
+.section {
+  &__wrapper {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  &__header {
+    width: 30%;
+  }
+
+  &__description {
+    width: 70%;
+  }
+
+  &:nth-child(even) {
+    background-image: linear-gradient(to left, $section-odd-head-backgrnd-color 50%, $section-even-head-backgrnd-color  50%);
+
+    @media (width > 1023px) {
+      & .section__description {
+        background-color: $section-even-descript-backgrnd-color;
+      }
+
+      & .section__header {
+        background-color: $section-even-head-backgrnd-color;
+      }
+    }
+  }
+
+  &:nth-child(odd) {
+    background-image: linear-gradient(to right, $section-odd-head-backgrnd-color 50%, $section-odd-descript-backgrnd-color 50%);
+
+    @media (width > 1023px) {
+      & .section__description {
+        background-color: $section-odd-descript-backgrnd-color;
+      }
+
+      & .section__header {
+        background-color: $section-odd-head-backgrnd-color;
+      }
+    }
+  }
+
+  @media (width >= 1200px) {
+    &__block {
+      padding: 6.1rem 7.35rem;
+    }
+
+    &__wrapper {
+      max-width: 127.6rem;
+    }
+  }
+
+  @media (width <= 1199px) {
+    &__block {
+      padding: 4.41rem 4.9rem 4.4rem;
+    }
+  }
+
+  @media (width <= 1023px) {
+    &__wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__header {
+      width: 100%;
+      padding-bottom: 4.9rem;
+      background-color: $section-odd-head-backgrnd-mob-color;
+      border-top: 1px solid $hr-color;
+      border-bottom: 1px solid $hr-color;
+    }
+
+    &__description {
+      width: 100%;
+      background-color: $section-even-descript-backgrnd-color;
+    }
+  }
+
+  @media (width <= 759px) {
+    &__block {
+      padding: 2.5rem;
+    }
+
+    &__header {
+      padding-bottom: 2.8rem;
+    }
+  }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.8rem 4.9rem;
+
+  &__item {
+    display: grid;
+    grid-template-columns: 1.95rem auto;
+    grid-template-rows: max-content auto;
+    column-gap: 2rem;
+  }
+
+  @media (width <= 1199px) {
+    row-gap: 2.5rem;
+
+    &__item {
+      line-height: 1.87;
+    }
+  }
+
+  @media (width <= 1023px) {
+    row-gap: 2.43rem;
+
+    &__item {
+      line-height: 1.9;
+    }
+  }
+
+  @media (width <= 759px) {
+    &__item {
+      line-height: 1.92;
+    }
+  }
+
+  @media (width <= 599px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.item {
+  line-height: 1.45;
+
+  &__percent {
+    font-weight: 600;
+    font-size: 1.68em;
+    color: $mark-color;
+
+    &::after {
+      content: "%";
+      font-weight: 400;
+      font-size: 0.7em;
+    }
+  }
+
+  &__label {
+    font-weight: 600;
+    font-size: 1.68em;
+    color: $title-color;
+    text-transform: uppercase;
+  }
+
+  &__progress {
+    position: relative;
+    top: 0.4rem;
+    grid-area: 2 / 1 / 3 / 3;
+    width: 100%;
+    height: 0.5rem;
+
+    &::-webkit-progress-bar {
+      background-color: $hr-color;
+    }
+
+    &::-webkit-progress-value {
+      background-color: $mark-color;
+    }
+  }
+}
+
+.ord-list {
+  list-style-type: none;
+  counter-reset: item;
+}
+
+.ord-list__item::before {
+  content: "0" counter(item);
+  grid-row: 1 / 3;
+  font-weight: 600;
+  font-size: 1.68em;
+  line-height: 1.45;
+  color: $mark-color;
+  counter-increment: item;
+}
+
+.ord-list__title {
+  padding-bottom: 0.77rem;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+.ord-list__text {
+  font-size: 1.4em;
+
+  @media (width <= 759px) {
+    letter-spacing: calc(-0.15em / 100);
+  }
+}
+
+.unord-list {
+  position: relative;
+  bottom: 0.4rem;
+}

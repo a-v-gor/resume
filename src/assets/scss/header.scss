@@ -1,0 +1,270 @@
+@import "variables";
+
+.header {
+  &__wrapper {
+    height: 100vh;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 11.7rem;
+  }
+
+  &__photo {
+    height: auto;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+
+  &__descr-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+
+    & > * {
+      align-self: end;
+    }
+  }
+
+  &__descr-text {
+    padding-top: 4.4rem;
+  }
+
+  &__name {
+    line-height: 0.91;
+  }
+
+  &__fname {
+    font-weight: 300;
+    color: $main-text-color;
+  }
+
+  &__lname {
+    font-weight: 700;
+    color: $mark-color;
+  }
+
+  &__position {
+    padding: 1.9rem 0.4rem;
+    font-weight: 300;
+  }
+
+  @media (width >= 1200px) {
+    &__description {
+      padding-bottom: 2.2rem;
+    }
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 35%;
+      min-width: 35.49rem;
+      max-width: 38.28rem;
+      padding-bottom: 11.7rem;
+    }
+
+    &__photo {
+      width: 100%;
+      max-width: 23.58rem;
+    }
+
+    &__name {
+      font-size: 6.72em;
+    }
+
+    &__position {
+      font-size: 2.1em;
+    }
+  }
+
+  @media (width <= 1199px) {
+    &__description {
+      padding-bottom: 0;
+    }
+
+    &__header {
+      max-width: 35.97rem;
+    }
+
+    &__photo {
+      width: 19.6rem;
+    }
+
+    &__name {
+      font-size: 4.37em;
+    }
+
+    &__position {
+      font-size: 1.36em;
+    }
+
+    &__descr-text {
+      padding-top: 4.6rem;
+    }
+  }
+
+  @media (width <= 1023px) {
+    &__photo {
+      margin: 0 auto;
+    }
+
+    &__header {
+      max-width: unset;
+      padding-bottom: 0;
+      background-color: $section-even-descript-backgrnd-color;
+      border: unset;
+    }
+
+    &__wrapper {
+      height: auto;
+    }
+
+    &__descr-wrapper {
+      flex-direction: column;
+
+      & > * {
+        align-self: center;
+      }
+    }
+
+    &__description {
+      width: 100%;
+      padding-top: 2.45rem;
+    }
+
+    &__descr-text {
+      padding-top: 0;
+      text-align: center;
+    }
+
+    &__position {
+      padding: 2.3rem 0 3.1rem;
+    }
+  }
+
+  @media (width <= 759px) {
+    &__photo {
+      width: 15.4rem;
+    }
+
+    &__name {
+      line-height: 0.91;
+    }
+
+    &__position {
+      padding-top: 2.1rem;
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  padding-bottom: 2.5rem;
+  column-gap: 0.6rem;
+
+  &__icon {
+    background-color: $socials-color;
+    background-position: center;
+    background-size: contain;
+    border: 0.2rem solid $socials-color;
+    border-radius: 0.3rem;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  &__icon-facebook {
+    background-image: url("../svg/icon-facebook.svg");
+
+    &:hover {
+      background-image: url("../svg/icon-facebook-active.svg");
+    }
+  }
+
+  &__icon-dribbble {
+    background-image: url("../svg/icon-dribbble.svg");
+
+    &:hover {
+      background-image: url("../svg/icon-dribbble-active.svg");
+    }
+  }
+
+  &__icon-twitter {
+    background-image: url("../svg/icon-twitter.svg");
+
+    &:hover {
+      background-image: url("../svg/icon-twitter-active.svg");
+    }
+  }
+
+  @media (width >= 1200px) {
+    &__icon {
+      width: 3.8rem;
+      height: 3.8rem;
+    }
+  }
+
+  @media (width <= 1199px) {
+    &__icon {
+      width: 3.3rem;
+      height: 3.3rem;
+    }
+  }
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2.6rem 0 3.9rem;
+  border-top: 0.2rem solid $hr-color;
+
+  @media (width <= 1199px) {
+    padding-bottom: 4.9rem;
+  }
+
+  @media (width <= 759px) {
+    flex-wrap: wrap;
+    padding-bottom: 2.9rem;
+    gap: 3.25rem 1vw;
+
+    &__contact {
+      width: 46%;
+      text-align: center;
+    }
+  }
+
+  @media (width <= 599px) {
+    &__contact {
+      width: 100%;
+    }
+  }
+}
+
+.contact {
+  &__title,
+  &__descr {
+    font-size: 1.4em;
+  }
+
+  &__title {
+    padding-bottom: 1rem;
+    text-transform: none;
+  }
+
+  &__link {
+    font-weight: 400;
+    color: $main-text-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $mark-color;
+    }
+  }
+}
