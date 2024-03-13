@@ -86,7 +86,7 @@
 
     &__header {
       width: 100%;
-      padding-bottom: 4.9rem;
+      padding-bottom: 5.2rem;
       background-color: $section-odd-head-backgrnd-mob-color;
       border-top: 1px solid $hr-color;
       border-bottom: 1px solid $hr-color;
@@ -104,7 +104,21 @@
     }
 
     &__header {
-      padding-bottom: 2.8rem;
+      padding-bottom: 3.1rem;
+    }
+
+    &__description {
+      padding-bottom: 2.4rem;
+    }
+  }
+
+  @media (width <= 599px) {
+    &__header {
+      padding-bottom: 3.3rem;
+    }
+
+    &__description {
+      padding-bottom: 2.3rem;
     }
   }
 }
