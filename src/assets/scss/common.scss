@@ -150,8 +150,6 @@
 }
 
 .item {
-  line-height: 1.45;
-
   &__percent {
     font-weight: 600;
     font-size: 1.68em;
@@ -215,9 +213,4 @@
   @media (width <= 759px) {
     letter-spacing: calc(-0.15em / 100);
   }
-}
-
-.unord-list {
-  position: relative;
-  bottom: 0.4rem;
 }

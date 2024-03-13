@@ -1,0 +1,11 @@
+.skills {
+  &__list {
+    row-gap: 4.07rem;
+    padding-bottom: 0.5rem;
+  }
+
+  &__item {
+    line-height: 1.5;
+    row-gap: 0.4rem;
+  }
+}
