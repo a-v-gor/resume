@@ -37,6 +37,10 @@
   &:nth-child(even) {
     background-image: linear-gradient(to left, $section-odd-head-backgrnd-color 50%, $section-even-head-backgrnd-color  50%);
 
+    & .evolution-ul__article::before {
+      color: $section-even-descript-backgrnd-color;
+    }
+
     @media (width > 1023px) {
       & .section__description {
         background-color: $section-even-descript-backgrnd-color;
@@ -50,6 +54,10 @@
 
   &:nth-child(odd) {
     background-image: linear-gradient(to right, $section-odd-head-backgrnd-color 50%, $section-odd-descript-backgrnd-color 50%);
+
+    & .evolution-ul__article::before {
+      color: $section-odd-descript-backgrnd-color;
+    }
 
     @media (width > 1023px) {
       & .section__description {
@@ -141,16 +149,6 @@
 
   @media (width <= 1023px) {
     row-gap: 2.43rem;
-
-    &__item {
-      line-height: 1.9;
-    }
-  }
-
-  @media (width <= 759px) {
-    &__item {
-      line-height: 1.92;
-    }
   }
 
   @media (width <= 599px) {

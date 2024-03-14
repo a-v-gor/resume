@@ -1,0 +1,15 @@
+.experience {
+  &__description {
+    padding-bottom: 0;
+  }
+
+  &__item:last-child {
+    padding-bottom: 3.7rem;
+  }
+
+  @media (width <= 1199px) {
+    &__item:last-child {
+      padding-bottom: 2.3rem;
+    }
+  }
+}

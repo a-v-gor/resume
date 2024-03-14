@@ -8,4 +8,16 @@
     line-height: 1.5;
     row-gap: 0.4rem;
   }
+
+  @media (width <= 1199px) {
+    &__list {
+      row-gap: 2.84rem;
+    }
+
+    &__item {
+      position: relative;
+      bottom: 0.04rem;
+      row-gap: 0.3rem;
+    }
+  }
 }

@@ -5,6 +5,8 @@
 @import "header";
 @import "socials";
 @import "skills";
+@import "evolution";
+@import "experience";
 
 .article-block {
   &__header {
@@ -12,7 +14,7 @@
   }
 
   &__subtitle {
-    padding-top: 1.4rem;
+    padding-top: 1.47rem;
     font-size: 1.4em;
     line-height: 0.75;
   }
@@ -47,32 +49,24 @@
   }
 }
 
-.evolution-ul {
-  display: flex;
-  flex-direction: column;
-  margin-left: 1.2rem;
-  padding: 0.4rem 0 0.4rem 2.5rem;
-  border-left: 0.2rem solid $hr-color;
-
-  &__item {
-    display: block;
-  }
-}
-
 .article-li {
+  position: relative;
+  bottom: 0.4rem;
   display: grid;
-  grid-template-columns: 37.7% 1fr;
+  grid-template-columns: 37.6% 1fr;
   column-gap: 4.9rem;
 
   &__header {
     display: flex;
     flex-direction: column;
     grid-area: 1 / 1 / 2 / 2;
+    row-gap: 0.56rem;
   }
 
   &__period {
     order: -1;
     font-size: 0.98em;
+    opacity: 0.6;
   }
 
   &__position {
@@ -82,10 +76,15 @@
 
   &__location {
     font-size: 0.98em;
+    opacity: 0.6;
   }
 
   &__text {
     font-size: 1.4em;
+  }
+
+  @media (width <= 1023px) {
+    grid-template-columns: 38.6% 1fr;
   }
 }
 
