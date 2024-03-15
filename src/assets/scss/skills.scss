@@ -20,4 +20,20 @@
       row-gap: 0.3rem;
     }
   }
+
+  @media (759px < width <= 1023px) {
+    &__header {
+      padding-bottom: 5rem;
+    }
+
+    &__description {
+      padding-bottom: 4.3rem;
+    }
+  }
+
+  @media (width <= 759px) {
+    &__description {
+      padding-bottom: 2.3rem;
+    }
+  }
 }

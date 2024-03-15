@@ -12,4 +12,24 @@
       padding-bottom: 2.3rem;
     }
   }
+
+  @media (759px < width <= 1023px) {
+    &__header {
+      padding-bottom: 5.1rem;
+    }
+
+    &__description {
+      padding-bottom: 0.2rem;
+    }
+  }
+
+  @media (width <= 759px) {
+    padding-bottom: 0.2rem;
+  }
+
+  @media (width <= 599px) {
+    &__ul {
+      padding-bottom: 0.3rem;
+    }
+  }
 }

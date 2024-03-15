@@ -28,4 +28,18 @@
   @media (width <= 1199px) {
     row-gap: 3.2rem;
   }
+
+  @media (width <= 759px) {
+    &__article {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.5rem;
+    }
+  }
+
+  @media (width <= 599px) {
+    &__article {
+      row-gap: 0.6rem;
+    }
+  }
 }

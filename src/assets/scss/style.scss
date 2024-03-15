@@ -1,92 +1,13 @@
 @import "reset";
 @import "fonts";
-@import "common";
 @import "variables";
+@import "common";
 @import "header";
 @import "socials";
+@import "article";
 @import "skills";
 @import "evolution";
 @import "experience";
-
-.article-block {
-  &__header {
-    text-align: right;
-  }
-
-  &__subtitle {
-    padding-top: 1.47rem;
-    font-size: 1.4em;
-    line-height: 0.75;
-  }
-
-  &__text {
-    font-size: 1.71em;
-
-    &:not(:nth-last-child(1)) {
-      padding-bottom: 1.1em;
-    }
-  }
-
-  &__link {
-    color: $mark-color;
-    text-decoration: none;
-
-    &:hover {
-      color: $active-link;
-    }
-  }
-
-  @media (width <= 1023px) {
-    &__header {
-      text-align: inherit;
-    }
-  }
-
-  @media (width <= 599px) {
-    &__text {
-      font-size: 1.4em;
-    }
-  }
-}
-
-.article-li {
-  position: relative;
-  bottom: 0.4rem;
-  display: grid;
-  grid-template-columns: 37.6% 1fr;
-  column-gap: 4.9rem;
-
-  &__header {
-    display: flex;
-    flex-direction: column;
-    grid-area: 1 / 1 / 2 / 2;
-    row-gap: 0.56rem;
-  }
-
-  &__period {
-    order: -1;
-    font-size: 0.98em;
-    opacity: 0.6;
-  }
-
-  &__position {
-    font-size: 1.12em;
-    color: $title-color;
-  }
-
-  &__location {
-    font-size: 0.98em;
-    opacity: 0.6;
-  }
-
-  &__text {
-    font-size: 1.4em;
-  }
-
-  @media (width <= 1023px) {
-    grid-template-columns: 38.6% 1fr;
-  }
-}
 
 // Make element visible
 
