@@ -1,0 +1,67 @@
+.education {
+  &__description {
+    padding-top: 0;
+  }
+
+  &__item:first-child {
+    padding-top: 6.2rem;
+  }
+
+  &__item:last-child {
+    padding-bottom: 3.6rem;
+
+    &::after {
+      content: "";
+      position: relative;
+      top: 4rem;
+      right: 3.4rem;
+      display: block;
+      width: 1.6rem;
+      border-bottom: 0.2rem solid $hr-color;
+    }
+  }
+
+  @media (width <= 1199px) {
+    &__item:first-child {
+      padding-top: 4.4rem;
+    }
+
+    &__item:last-child {
+      padding-bottom: 2rem;
+
+      &::after {
+        top: 2.6rem;
+      }
+    }
+  }
+
+  @media (width <= 1023px) {
+    &__header {
+      padding-bottom: 5.1rem;
+    }
+  }
+
+  @media (width <= 759px) {
+    &__header {
+      padding-bottom: 3.2rem;
+    }
+
+    &__item:first-child {
+      padding-top: 2.4rem;
+    }
+
+    &__ul {
+      row-gap: 3.3rem;
+    }
+  }
+
+  @media (width <= 599px) {
+    &__header {
+      padding-bottom: 3.1rem;
+    }
+
+    &__ul {
+      row-gap: 3.2rem;
+    }
+  }
+}

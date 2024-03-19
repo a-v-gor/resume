@@ -29,7 +29,13 @@
     row-gap: 3.2rem;
   }
 
+  @media (width <= 1023px) {
+    row-gap: 3.16rem;
+  }
+
   @media (width <= 759px) {
+    padding-bottom: 0.7rem;
+
     &__article {
       display: flex;
       flex-direction: column;

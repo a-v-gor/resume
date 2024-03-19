@@ -23,13 +23,13 @@
     }
   }
 
-  @media (width <= 759px) {
-    padding-bottom: 0.2rem;
-  }
-
   @media (width <= 599px) {
     &__ul {
       padding-bottom: 0.3rem;
+    }
+
+    &__item:last-child {
+      padding-bottom: 2.6rem;
     }
   }
 }
