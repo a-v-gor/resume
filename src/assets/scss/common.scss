@@ -1,5 +1,3 @@
-@import "variables";
-
 .body {
   line-height: 1.75;
   font-family: $font;
@@ -35,7 +33,7 @@
   }
 
   &:nth-child(even) {
-    background-image: linear-gradient(to left, $section-odd-head-backgrnd-color 50%, $section-even-head-backgrnd-color  50%);
+    background-image: linear-gradient(to left, $section-even-descript-backgrnd-color 50%, $section-even-head-backgrnd-color  50%);
 
     & .evolution-ul__article::before {
       color: $section-even-descript-backgrnd-color;
