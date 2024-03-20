@@ -1,0 +1,42 @@
+.profiles-article {
+  &__icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  &:nth-child(1) {
+    .profiles-article__icon {
+      background-image: url("../svg/icon-prof-leaf.svg");
+    }
+  }
+
+  &:nth-child(2) {
+    .profiles-article__icon {
+      background-image: url("../svg/icon-prof-github.svg");
+    }
+  }
+
+  &:nth-child(3) {
+    .profiles-article__icon {
+      background-image: url("../svg/icon-prof-medium.svg");
+    }
+  }
+
+  &:nth-child(4) {
+    .profiles-article__icon {
+      background-image: url("../svg/icon-prof-dribbble.svg");
+    }
+  }
+
+  &:nth-child(5) {
+    .profiles-article__icon {
+      background-image: url("../svg/icon-prof-flickr.svg");
+    }
+  }
+
+  &:nth-child(6) {
+    .profiles-article__icon {
+      background-image: url("../svg/icon-prof-deviantart.svg");
+    }
+  }
+}
