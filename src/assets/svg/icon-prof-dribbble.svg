@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
 <svg
+   version="1.1"
+   width="28"
+   height="28"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   
-   <g
-      transform="translate(-93.544334,-143.91796)"
-      style="stroke:#e0e0e0">
-   <circle
-      style="fill:none;stroke:#e0e0e0;stroke-width:2.2;"
-      cx="107.49147"
-      cy="157.85522"
-      r="12.524398" />
-   <path
-      style="fill:none;stroke:#e0e0e0;stroke-width:2.2;"
-      d="m 102.62864,146.30993 c 2.92251,1.68957 9.61915,13.90181 10.4411,22.76066" />
-   <path
-      style="fill:none;stroke:#e0e0e0;stroke-width:2.2;"
-      d="m 94.958005,156.69335 c 5.401435,-0.22809 15.652755,-0.41047 21.526105,-7.50093" />
-   <path
-      style="fill:none;stroke:#e0e0e0;stroke-width:2.2;"
-      d="m 99.120728,167.12354 c 4.185362,-8.17936 13.828642,-10.51325 20.824522,-8.06219" />
-   </g>
+  <g
+     transform="translate(-93.544334,-143.91796)"
+     style="stroke:#e0e0e0">
+    <circle
+       style="fill:none;stroke:#e0e0e0;stroke-width:2.2"
+       cx="107.49147"
+       cy="157.85522"
+       r="12.524398"/>
+    <path
+       style="fill:none;stroke:#e0e0e0;stroke-width:2.2"
+       d="m 102.62864,146.30993 c 2.92251,1.68957 9.61915,13.90181 10.4411,22.76066"/>
+    <path
+       style="fill:none;stroke:#e0e0e0;stroke-width:2.2"
+       d="m 94.958005,156.69335 c 5.401435,-0.22809 15.652755,-0.41047 21.526105,-7.50093"/>
+    <path
+       style="fill:none;stroke:#e0e0e0;stroke-width:2.2"
+       d="m 99.120728,167.12354 c 4.185362,-8.17936 13.828642,-10.51325 20.824522,-8.06219"/>
+  </g>
 </svg>

@@ -5,7 +5,6 @@
 
   &__subtitle {
     padding-top: 1.47rem;
-    font-size: 1.4em;
     line-height: 0.75;
   }
 
@@ -67,10 +66,6 @@
   &__location {
     font-size: 0.98em;
     opacity: 0.6;
-  }
-
-  &__text {
-    font-size: 1.4em;
   }
 
   @media (width <= 1023px) {
