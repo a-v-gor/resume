@@ -6,11 +6,20 @@
 
     @media (width <= 1199px) {
       grid-template: repeat(3, auto) / repeat(2, 1fr);
+      row-gap: 2.4rem;
+    }
+
+    @media (width <= 1023px) {
+      padding-bottom: 4.3rem;
+    }
+
+    @media (width <= 759px) {
+      padding-bottom: 2.4rem;
     }
 
     @media (width <= 599px) {
       grid-template: repeat(1, auto) / 1fr;
-      row-gap: 2.4rem;
+      padding-bottom: 2.5rem;
     }
   }
 }
