@@ -3,25 +3,54 @@
    version="1.1"
    width="28"
    height="28"
+   id="svg3"
+   sodipodi:docname="icon-prof-dribbble.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="29.035714"
+     inkscape:cx="14"
+     inkscape:cy="22.231243"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3" />
   <g
-     transform="translate(-93.544334,-143.91796)"
-     style="stroke:#e0e0e0">
+     transform="matrix(1.0275683,0,0,1.0275683,-96.454832,-148.20703)"
+     style="stroke:#e0e0e0"
+     id="g3">
     <circle
        style="fill:none;stroke:#e0e0e0;stroke-width:2.2"
        cx="107.49147"
        cy="157.85522"
-       r="12.524398"/>
+       r="12.524398"
+       id="circle1" />
     <path
        style="fill:none;stroke:#e0e0e0;stroke-width:2.2"
-       d="m 102.62864,146.30993 c 2.92251,1.68957 9.61915,13.90181 10.4411,22.76066"/>
+       d="m 102.62864,146.30993 c 2.92251,1.68957 9.61915,13.90181 10.4411,22.76066"
+       id="path1" />
     <path
        style="fill:none;stroke:#e0e0e0;stroke-width:2.2"
-       d="m 94.958005,156.69335 c 5.401435,-0.22809 15.652755,-0.41047 21.526105,-7.50093"/>
+       d="m 94.958005,156.69335 c 5.401435,-0.22809 15.652755,-0.41047 21.526105,-7.50093"
+       id="path2" />
     <path
        style="fill:none;stroke:#e0e0e0;stroke-width:2.2"
-       d="m 99.120728,167.12354 c 4.185362,-8.17936 13.828642,-10.51325 20.824522,-8.06219"/>
+       d="m 99.120728,167.12354 c 4.185362,-8.17936 13.828642,-10.51325 20.824522,-8.06219"
+       id="path3" />
   </g>
 </svg>
