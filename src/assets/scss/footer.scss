@@ -1,0 +1,12 @@
+.footer__contacts {
+  padding-top: 0;
+  padding-bottom: 5.9rem;
+  border-top: none;
+  border-bottom: 0.2rem solid $hr-color;
+}
+
+.contact-section {
+  &__description {
+    padding-top: 6.3rem;
+  }
+}
