@@ -11,6 +11,12 @@
       padding-top: 40px;
     }
   }
+
+  @media (width <= 599px) {
+    &__description {
+      grid-template-columns: 1fr;
+    }
+  }
 }
 
 .portfolio-article {
@@ -19,9 +25,8 @@
 
   &__wrapper {
     position: absolute;
-    bottom: 9vw;
     width: 100%;
-    padding: 0 2.4rem;
+    padding: 2.7rem 2.4rem;
     color: $portfolio-font-color;
     opacity: 0;
     transition: 0.6s;
