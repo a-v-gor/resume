@@ -1,0 +1,34 @@
+.clients {
+  &__description {
+    padding-bottom: 6.4rem;
+  }
+
+  &__ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4.1rem 3.5rem;
+  }
+
+  &__li {
+    display: block;
+    max-height: 3rem;
+  }
+
+  &__img {
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  @media (width <= 599px) {
+    &__ul {
+      row-gap: 2.1rem;
+    }
+
+    &__img {
+      max-height: 3rem;
+    }
+  }
+}

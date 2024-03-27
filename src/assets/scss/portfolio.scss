@@ -3,12 +3,24 @@
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(2, 1fr);
     padding-top: 5.7rem;
+    padding-bottom: 5.9rem;
     gap: 1.9rem 2.5rem;
   }
 
   @media (width <= 1199px) {
     &__description {
       padding-top: 4rem;
+      padding-bottom: 4.2rem;
+    }
+  }
+
+  @media (width <= 1023px) {
+    &__header {
+      padding-bottom: 5.1rem;
+    }
+
+    &__description {
+      padding-bottom: 4.1rem;
     }
   }
 
@@ -20,6 +32,7 @@
 
     &__description {
       padding-top: 2.2rem;
+      padding-bottom: 2.2rem;
     }
   }
 
