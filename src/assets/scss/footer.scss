@@ -1,12 +1,88 @@
-.footer__contacts {
-  padding-top: 0;
-  padding-bottom: 5.9rem;
-  border-top: none;
-  border-bottom: 0.2rem solid $hr-color;
+.footer {
+  &__contacts {
+    padding-top: 0;
+    padding-bottom: 5.9rem;
+    border-top: none;
+    border-bottom: 0.2rem solid $hr-color;
+  }
+
+  .personal__descr-text {
+    padding-top: 12.2rem;
+  }
+
+  .personal__name {
+    font-size: 5.4em;
+  }
+
+  .socials {
+    padding-bottom: 0;
+  }
+
+  @media (width <= 1199px) {
+    &__contacts {
+      padding-bottom: 4.5rem;
+    }
+
+    .personal__descr-text {
+      padding-top: 8.8rem;
+    }
+
+    .personal__name {
+      font-size: 4.37em;
+    }
+  }
+
+  @media (width <= 1023px) {
+    &__contacts {
+      padding-bottom: 4.4rem;
+    }
+  }
+
+  @media (width <= 759px) {
+    &__contacts {
+      padding-bottom: 2.5rem;
+    }
+
+    .contacts__contact {
+      text-align: left;
+    }
+  }
+
+  @media (width <= 599px) {
+    &__contacts {
+      padding-bottom: 2.4rem;
+    }
+
+    .contact-section__header {
+      padding-bottom: 3.1rem;
+    }
+
+    .personal__descr-text {
+      padding-top: 4.9rem;
+    }
+
+    .personal__wrapper {
+      flex-direction: column;
+      align-items: start;
+      row-gap: 2.4rem;
+    }
+  }
 }
 
 .contact-section {
   &__description {
     padding-top: 6.3rem;
+  }
+
+  @media (width <= 1199px) {
+    &__description {
+      padding-top: 4.6rem;
+    }
+  }
+
+  @media (width <= 759px) {
+    &__description {
+      padding-top: 2.6rem;
+    }
   }
 }

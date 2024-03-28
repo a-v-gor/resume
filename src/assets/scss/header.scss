@@ -20,37 +20,11 @@
   }
 
   &__descr-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     height: 100%;
 
     & > * {
       align-self: end;
     }
-  }
-
-  &__descr-text {
-    padding-top: 4.4rem;
-  }
-
-  &__name {
-    line-height: 0.91;
-  }
-
-  &__fname {
-    font-weight: 300;
-    color: $main-text-color;
-  }
-
-  &__lname {
-    font-weight: 700;
-    color: $mark-color;
-  }
-
-  &__position {
-    padding: 1.9rem 0.4rem;
-    font-weight: 300;
   }
 
   @media (width >= 1200px) {
@@ -72,14 +46,6 @@
       width: 100%;
       max-width: 23.58rem;
     }
-
-    &__name {
-      font-size: 6.72em;
-    }
-
-    &__position {
-      font-size: 2.1em;
-    }
   }
 
   @media (width <= 1199px) {
@@ -93,20 +59,6 @@
 
     &__photo {
       width: 19.6rem;
-    }
-
-    &__name {
-      font-size: 4.37em;
-    }
-
-    &__position {
-      padding-top: 2.1rem;
-      padding-bottom: 1.3rem;
-      font-size: 1.36em;
-    }
-
-    &__descr-text {
-      padding-top: 3.9rem;
     }
   }
 
@@ -126,7 +78,12 @@
       height: auto;
     }
 
-    &__descr-wrapper {
+    &__description {
+      width: 100%;
+      padding-top: 2.45rem;
+    }
+
+    .personal__wrapper {
       flex-direction: column;
 
       & > * {
@@ -134,81 +91,15 @@
       }
     }
 
-    &__description {
-      width: 100%;
-      padding-top: 2.45rem;
-    }
-
-    &__descr-text {
+    .personal__descr-text {
       padding-top: 0;
       text-align: center;
-    }
-
-    &__position {
-      padding: 1.9rem 0 2.6rem 0.4rem;
     }
   }
 
   @media (width <= 759px) {
     &__photo {
       width: 15.4rem;
-    }
-
-    &__name {
-      line-height: 0.91;
-    }
-
-    &__position {
-      padding-top: 1.8rem;
-    }
-  }
-}
-
-.contacts {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 2.6rem 0 3.9rem;
-  border-top: 0.2rem solid $hr-color;
-
-  @media (width <= 1199px) {
-    padding-bottom: 4.4rem;
-  }
-
-  @media (width <= 759px) {
-    flex-wrap: wrap;
-    padding-bottom: 2.5rem;
-    gap: 2.7rem 1vw;
-
-    &__contact {
-      width: 46%;
-      text-align: center;
-    }
-  }
-
-  @media (width <= 599px) {
-    row-gap: 2.65rem;
-    padding-bottom: 2.4rem;
-
-    &__contact {
-      width: 100%;
-    }
-  }
-}
-
-.contact {
-  &__title {
-    padding-bottom: 1rem;
-    text-transform: none;
-  }
-
-  &__link {
-    font-weight: 400;
-    color: $main-text-color;
-    text-decoration: none;
-
-    &:hover {
-      color: $mark-color;
     }
   }
 }

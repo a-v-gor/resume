@@ -1,0 +1,66 @@
+.personal {
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: end;
+    width: 100%;
+  }
+
+  &__descr-text {
+    padding-top: 4.4rem;
+  }
+
+  &__name {
+    font-size: 6.72em;
+    line-height: 0.91;
+  }
+
+  &__fname {
+    font-weight: 300;
+    color: $main-text-color;
+  }
+
+  &__lname {
+    font-weight: 700;
+    color: $mark-color;
+  }
+
+  &__position {
+    padding: 1.9rem 0.4rem;
+    font-weight: 300;
+    font-size: 2.1em;
+  }
+
+  @media (width <= 1199px) {
+    &__descr-text {
+      padding-top: 3.9rem;
+    }
+
+    &__name {
+      font-size: 4.37em;
+    }
+
+    &__position {
+      padding-top: 2.1rem;
+      padding-bottom: 1.3rem;
+      font-size: 1.36em;
+    }
+  }
+
+  @media (width <= 1023px) {
+    &__position {
+      padding: 1.9rem 0 2.6rem 0.4rem;
+    }
+  }
+
+  @media (width <= 759px) {
+    &__name {
+      line-height: 0.91;
+    }
+
+    &__position {
+      padding-top: 1.8rem;
+    }
+  }
+}

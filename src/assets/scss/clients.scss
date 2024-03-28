@@ -22,7 +22,23 @@
     }
   }
 
+  @media (width <= 1199px) {
+    &__description {
+      padding-bottom: 6.4rem;
+    }
+  }
+
+  @media (width <= 759px) {
+    &__description {
+      padding-bottom: 4.4rem;
+    }
+  }
+
   @media (width <= 599px) {
+    &__description {
+      padding-bottom: 2.5rem;
+    }
+
     &__ul {
       row-gap: 2.1rem;
     }
