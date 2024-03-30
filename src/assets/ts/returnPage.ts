@@ -1,4 +1,4 @@
-// import imgAvatar from '../img/avatar.jpg';
+import imgAvatar from '../img/avatar.jpg';
 // import imgLouvre from '../img/louvre_thumb.jpg';
 // import imgTunnel from '../img/tunnel_thumb.jpg';
 // import imgNewYork from '../img/NY_thumb.jpg';
@@ -15,6 +15,7 @@
 // import imgClientYoutube from '../img/clients-youtube.png'
 
 import returnElement from './returnElement';
+import returnSocials from './returnSocials';
 
 export default function returnPage() {
   const body: HTMLBodyElement = <HTMLBodyElement>(
@@ -42,40 +43,66 @@ export default function returnPage() {
     tag: 'div',
     classes: ['section__header', 'section__block', 'header__header'],
   });
-  // const headerPhoto = returnElement({tag:'img', classes:['header__photo']});
+  const headerPhoto = returnElement({
+    tag: 'img',
+    classes: ['header__photo'],
+    src: imgAvatar,
+    attrib: [{ name: 'alt', value: "Desmond's photo" }],
+  });
+  const headerDescription = returnElement({
+    tag: 'div',
+    classes: ['section__description', 'section__block', 'header__description'],
+  });
+  const personalWrapper = returnElement({
+    tag: 'div',
+    classes: ['header__descr-wrapper', 'personal__wrapper'],
+  });
+  const personalDescriptionText = returnElement({
+    tag: 'div',
+    classes: ['personal__descr-text'],
+  });
+  const personalName = returnElement({
+    tag: 'div',
+    classes: ['personal__name'],
+  });
+  const personalFName = returnElement({
+    tag: 'span',
+    classes: ['personal__fname'],
+    textContent: 'desmond',
+  });
+  const br = returnElement({
+    tag: 'br',
+  });
+  const personalLName = returnElement({
+    tag: 'span',
+    classes: ['personal__lname'],
+    textContent: 'RAMBOWSKI',
+  });
+  const personalPosition = returnElement({
+    tag: 'div',
+    classes: ['personal__position'],
+    textContent: 'Web Developer & Front-end Expert',
+  });
+  const headerSocials = returnSocials();
+  headerSocials.classList.add('header__socials');
 
-  headerArticle.append(headerArticleTitle, headerHeader);
+  personalName.append(personalFName, br, personalLName);
+  personalDescriptionText.append(personalName, personalPosition);
+  personalWrapper.append(personalDescriptionText, headerSocials);
+  headerDescription.append(personalWrapper);
+  headerHeader.append(headerPhoto);
+  headerArticle.append(headerArticleTitle, headerHeader, headerDescription);
   header.append(headerArticle);
   body.append(pageTitle, header);
 
   //   <header>
-  //     <article>
-  //       <h2>Personal info</h2>
-  //       <div>
-  //         <img class="header__photo" src=${imgAvatar} alt="Desmond's photo" />
-  //       </div>
-  //       <div class="section__description section__block header__description">
-  //         <div class="header__descr-wrapper personal__wrapper">
-  //           <div class="personal__descr-text">
-  //             <div class="personal__name">
-  //               <span class="personal__fname">desmond</span><br />
-  //               <span class="personal__lname">RAMBOWSKI</span>
-  //             </div>
-  //             <div class="personal__position">
-  //               Web Developer &amp; Front-end Expert
-  //             </div>
-  //           </div>
-  //           <section class="header__socials socials">
-  //             <h3 class="socials__title">Social buttons</h3>
-  //             <a href="https://www.facebook.com/RuvenThemes/" class="socials__link">
-  //               <div class="socials__icon socials__icon-facebook"></div></a>
-  //             <a href="https://dribbble.com/" class="socials__link">
-  //               <div class="socials__icon socials__icon-dribbble">
-  //               </div></a>
-  //             <a href="https://twitter.com/_Ruven" class="socials__link">
-  //               <div class="socials__icon socials__icon-twitter">
-  //               </div></a>
-  //           </section>
+  //     <headerArticle>
+  //       <headerArticleTitle>
+  //       <headerHeader>
+  //       <headerDescription>
+  //         <personalWrapper>
+  //           <personalDescriptionText>
+  //           <headerSocials>
   //           <section class="header__contacts contacts">
   //             <h3 class="contacts__title">Contacts</h3>
   //             <article class="contacts__contact contact">

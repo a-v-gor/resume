@@ -4,6 +4,7 @@ interface IElemData {
   id?: string;
   attrib?: { name: string; value: string }[];
   textContent?: string;
+  src?: string;
 }
 
 export default function returnElement(elemData: IElemData): HTMLElement {
@@ -23,6 +24,9 @@ export default function returnElement(elemData: IElemData): HTMLElement {
   }
   if (elemData.textContent !== undefined) {
     element.textContent = elemData.textContent;
+  }
+  if (elemData.tag === 'img' && elemData.src !== undefined) {
+    element.setAttribute('src', elemData.src);
   }
   return element;
 }
