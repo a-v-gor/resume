@@ -16,6 +16,7 @@ import imgAvatar from '../img/avatar.jpg';
 
 import returnElement from './returnElement';
 import returnSocials from './returnSocials';
+import returnContacts from './returnContacts';
 
 export default function returnPage() {
   const body: HTMLBodyElement = <HTMLBodyElement>(
@@ -85,10 +86,16 @@ export default function returnPage() {
   });
   const headerSocials = returnSocials();
   headerSocials.classList.add('header__socials');
+  const headerContacts = returnContacts();
+  headerContacts.classList.add('header__contacts');
 
   personalName.append(personalFName, br, personalLName);
   personalDescriptionText.append(personalName, personalPosition);
-  personalWrapper.append(personalDescriptionText, headerSocials);
+  personalWrapper.append(
+    personalDescriptionText,
+    headerSocials,
+    headerContacts
+  );
   headerDescription.append(personalWrapper);
   headerHeader.append(headerPhoto);
   headerArticle.append(headerArticleTitle, headerHeader, headerDescription);
@@ -96,40 +103,6 @@ export default function returnPage() {
   body.append(pageTitle, header);
 
   //   <header>
-  //     <headerArticle>
-  //       <headerArticleTitle>
-  //       <headerHeader>
-  //       <headerDescription>
-  //         <personalWrapper>
-  //           <personalDescriptionText>
-  //           <headerSocials>
-  //           <section class="header__contacts contacts">
-  //             <h3 class="contacts__title">Contacts</h3>
-  //             <article class="contacts__contact contact">
-  //               <h4 class="contact__title title text">Location</h4>
-  //               <p class="contact__descr text">
-  //                 <a href="https://maps.app.goo.gl/jx7ninesXtGMHPwV6" target="_blank" rel="noopener noreferrer" class="contact__link">Portland, OR</a></p>
-  //             </article>
-  //             <article class="contacts__contact contact">
-  //               <h4 class="contact__title title text">Phone</h4>
-  //               <p class="contact__descr text">
-  //                 <a href="tel:+534456886" class="contact__link">534.456.886</a></p>
-  //             </article>
-  //             <article class="contacts__contact contact">
-  //               <h4 class="contact__title title text">Web</h4>
-  //               <p class="contact__descr text">
-  //                 <a href="https://ruvenpelka.com/demos/desmond-resume/light/#" class="contact__link">ruventhemes.com</a></p>
-  //             </article>
-  //             <article class="contacts__contact contact">
-  //               <h4 class="contact__title title text">Email</h4>
-  //               <p class="contact__descr text">
-  //                 <a href="mailto:hello@example.com" class="contact__link">hello@example.com</a></p>
-  //             </article>
-  //           </section>
-  //         </div>
-  //       </div>
-  //     </article>
-  //   </header>
   //   <main class="main">
   //     <div class="section">
   //       <article class="section__wrapper article-block">
