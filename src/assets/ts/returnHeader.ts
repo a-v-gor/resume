@@ -1,6 +1,6 @@
-import returnElement from './returnElement';
-import returnSocials from './returnSocials';
-import returnContacts from './returnContacts';
+import returnElement from './common/returnElement';
+import returnSocials from './common/returnSocials';
+import returnContacts from './common/returnContacts';
 
 import imgAvatar from '../img/avatar.jpg';
 

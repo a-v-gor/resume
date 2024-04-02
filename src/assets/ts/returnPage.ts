@@ -1,21 +1,6 @@
-// import imgLouvre from '../img/louvre_thumb.jpg';
-// import imgTunnel from '../img/tunnel_thumb.jpg';
-// import imgNewYork from '../img/NY_thumb.jpg';
-// import imgSkyHigh from '../img/Sky-High_thumb.jpg';
-// import imgEiffelTower from '../img/Eiffel-Tower_thumb.jpg';
-// import imgClouds from '../img/clouds_thumb.jpg';
-// import imgClientBBC from '../img/clients-bbc.png'
-// import imgClientDisney from '../img/clients-disney.png'
-// import imgClientGithub from '../img/clients-github.png'
-// import imgClientGoogle from '../img/clients-google.png'
-// import imgClientHTML5 from '../img/clients-html5.png'
-// import imgClientKickstarter from '../img/clients-kickstarter.png'
-// import imgClientVimeo from '../img/clients-vimeo.png'
-// import imgClientYoutube from '../img/clients-youtube.png'
-
-import returnElement from './returnElement';
+import returnElement from './common/returnElement';
 import returnHeader from './returnHeader';
-import returnMain from './returnMain';
+import returnMain from './main/returnMain';
 
 export default function returnPage() {
   const body: HTMLBodyElement = <HTMLBodyElement>(
