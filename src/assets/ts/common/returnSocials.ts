@@ -10,33 +10,41 @@ export default function returnSocials() {
     classes: ['socials__title'],
     textContent: 'Social buttons',
   });
-  const linkFB = returnElement({
+  const linkHabr = returnElement({
     tag: 'a',
     classes: ['socials__link'],
     attrib: [
       {
         name: 'href',
-        value: 'https://www.facebook.com/RuvenThemes/',
+        value: 'https://habr.com/ru/users/a-v-gor/',
+      },
+      {
+        name: 'target',
+        value: '_blank',
       },
     ],
   });
-  const iconFB = returnElement({
+  const iconHabr = returnElement({
     tag: 'div',
-    classes: ['socials__icon', 'socials__icon-facebook'],
+    classes: ['socials__icon', 'socials__icon-habr'],
   });
-  const linkDribbble = returnElement({
+  const linkGH = returnElement({
     tag: 'a',
     classes: ['socials__link'],
     attrib: [
       {
         name: 'href',
-        value: 'https://dribbble.com/',
+        value: 'https://github.com/a-v-gor',
+      },
+      {
+        name: 'target',
+        value: '_blank',
       },
     ],
   });
-  const iconDribbble = returnElement({
+  const iconGH = returnElement({
     tag: 'div',
-    classes: ['socials__icon', 'socials__icon-dribbble'],
+    classes: ['socials__icon', 'socials__icon-gh'],
   });
   const linkTwitter = returnElement({
     tag: 'a',
@@ -46,6 +54,10 @@ export default function returnSocials() {
         name: 'href',
         value: 'https://twitter.com/_Ruven',
       },
+      {
+        name: 'target',
+        value: '_blank',
+      },
     ],
   });
   const iconTwitter = returnElement({
@@ -53,9 +65,9 @@ export default function returnSocials() {
     classes: ['socials__icon', 'socials__icon-twitter'],
   });
 
-  linkFB.append(iconFB);
-  linkDribbble.append(iconDribbble);
+  linkHabr.append(iconHabr);
+  linkGH.append(iconGH);
   linkTwitter.append(iconTwitter);
-  socials.append(socialsTitle, linkFB, linkDribbble, linkTwitter);
+  socials.append(socialsTitle, linkHabr, linkGH, linkTwitter);
   return socials;
 }

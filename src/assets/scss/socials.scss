@@ -17,15 +17,15 @@
     }
   }
 
-  &__icon-facebook {
-    background-image: url("../svg/icon-facebook.svg");
+  &__icon-habr {
+    background-image: url("../svg/icon-habr.svg");
 
     &:hover {
-      background-image: url("../svg/icon-facebook-active.svg");
+      background-image: url("../svg/icon-habr-active.svg");
     }
   }
 
-  &__icon-dribbble {
+  &__icon-gh {
     background-image: url("../svg/icon-dribbble.svg");
 
     &:hover {

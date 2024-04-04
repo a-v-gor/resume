@@ -12,7 +12,7 @@ export default function returnPersonalDescriptionText() {
   const personalFName = returnElement({
     tag: 'span',
     classes: ['personal__fname'],
-    textContent: 'desmond',
+    textContent: 'Алексей',
   });
   const br = returnElement({
     tag: 'br',
@@ -20,12 +20,12 @@ export default function returnPersonalDescriptionText() {
   const personalLName = returnElement({
     tag: 'span',
     classes: ['personal__lname'],
-    textContent: 'RAMBOWSKI',
+    textContent: 'Горбенко',
   });
   const personalPosition = returnElement({
     tag: 'div',
     classes: ['personal__position'],
-    textContent: 'Web Developer & Front-end Expert',
+    textContent: 'Front-end-разработчик',
   });
 
   personalName.append(personalFName, br, personalLName);
