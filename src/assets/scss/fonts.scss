@@ -1,17 +1,23 @@
 @font-face {
+  font-weight: 100;
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Thin.ttf");
+}
+
+@font-face {
   font-weight: 300;
-  font-family: "Lato";
-  src: url("../fonts/Lato-Light.ttf");
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Light.ttf");
 }
 
 @font-face {
   font-weight: 400;
-  font-family: "Lato";
-  src: url("../fonts/Lato-Regular.ttf");
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf");
 }
 
 @font-face {
-  font-weight: 700;
-  font-family: "Lato";
-  src: url("../fonts/Lato-Bold.ttf");
+  font-weight: 500;
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Medium.ttf");
 }

@@ -12,23 +12,24 @@
   }
 
   &__name {
+    font-weight: 500;
     font-size: 6.72em;
     line-height: 0.91;
   }
 
   &__fname {
-    font-weight: 300;
+    font-weight: 100;
     color: $main-text-color;
   }
 
   &__lname {
-    font-weight: 700;
+    font-weight: 500;
     color: $mark-color;
   }
 
   &__position {
     padding: 1.9rem 0.4rem;
-    font-weight: 300;
+    font-weight: 100;
     font-size: 2.1em;
   }
 

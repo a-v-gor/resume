@@ -2,6 +2,7 @@
   line-height: 1.75;
   font-family: $font;
   color: $main-text-color;
+  letter-spacing: -0.02em;
 }
 
 .body__title,
@@ -12,6 +13,7 @@
 }
 
 .title {
+  font-weight: 500;
   font-size: 1.68em;
   line-height: 1.45;
   color: $title-color;
@@ -174,7 +176,7 @@
   }
 
   &__label {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.68em;
     color: $title-color;
     text-transform: uppercase;

@@ -17,7 +17,7 @@ export default function returnHeader() {
   const headerArticleTitle = returnElement({
     tag: 'h2',
     classes: ['section__title'],
-    textContent: 'Personal info',
+    textContent: 'Личная информация',
   });
   const headerHeader = returnElement({
     tag: 'div',
