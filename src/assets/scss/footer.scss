@@ -18,6 +18,10 @@
     padding-bottom: 0;
   }
 
+  .personal__position {
+    display: none;
+  }
+
   @media (width <= 1199px) {
     &__contacts {
       padding-bottom: 4.5rem;
