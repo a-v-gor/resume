@@ -53,31 +53,35 @@ export default function returnContacts() {
   const contactsTitle = returnElement({
     tag: 'h3',
     classes: ['contacts__title'],
-    textContent: 'Contacts',
+    textContent: 'Контакты',
   });
 
   const contactLocation = returnContact(
-    'Location',
-    'https://maps.app.goo.gl/jx7ninesXtGMHPwV6',
-    'Portland, OR'
+    'Местонахождение',
+    'https://maps.app.goo.gl/awAMRVKcbUeYWu1h8',
+    'Ростов-на-Дону'
   );
-  const contactPhone = returnContact('Phone', 'tel:+534456886', '534.456.886');
-  const contactWeb = returnContact(
-    'Web',
-    'https://ruvenpelka.com/demos/desmond-resume/light/#',
-    'ruventhemes.com'
+  const contactTelegram = returnContact(
+    'Телеграм',
+    'https://t.me/alexey_gorbenko',
+    '@alexey_gorbenko'
+  );
+  const contactDiscord = returnContact(
+    'Discord',
+    'https://discord.com/users/alexey_gorbenko',
+    '@alexey_gorbenko'
   );
   const contactEmail = returnContact(
-    'Email',
-    'mailto:hello@example.com',
-    'hello@example.com'
+    'E-mail',
+    'mailto:a.v.gor@mail.ru',
+    'a.v.gor@mail.ru'
   );
 
   contacts.append(
     contactsTitle,
     contactLocation,
-    contactPhone,
-    contactWeb,
+    contactTelegram,
+    contactDiscord,
     contactEmail
   );
   return contacts;

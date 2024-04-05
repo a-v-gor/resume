@@ -8,7 +8,7 @@ export default function returnSocials() {
   const socialsTitle = returnElement({
     tag: 'h3',
     classes: ['socials__title'],
-    textContent: 'Social buttons',
+    textContent: 'Социальные сети',
   });
   const linkHabr = returnElement({
     tag: 'a',
@@ -46,13 +46,13 @@ export default function returnSocials() {
     tag: 'div',
     classes: ['socials__icon', 'socials__icon-gh'],
   });
-  const linkTwitter = returnElement({
+  const linkCW = returnElement({
     tag: 'a',
     classes: ['socials__link'],
     attrib: [
       {
         name: 'href',
-        value: 'https://twitter.com/_Ruven',
+        value: 'https://www.codewars.com/users/a-v-gor',
       },
       {
         name: 'target',
@@ -60,14 +60,14 @@ export default function returnSocials() {
       },
     ],
   });
-  const iconTwitter = returnElement({
+  const iconCW = returnElement({
     tag: 'div',
-    classes: ['socials__icon', 'socials__icon-twitter'],
+    classes: ['socials__icon', 'socials__icon-codewars'],
   });
 
   linkHabr.append(iconHabr);
   linkGH.append(iconGH);
-  linkTwitter.append(iconTwitter);
-  socials.append(socialsTitle, linkHabr, linkGH, linkTwitter);
+  linkCW.append(iconCW);
+  socials.append(socialsTitle, linkHabr, linkGH, linkCW);
   return socials;
 }

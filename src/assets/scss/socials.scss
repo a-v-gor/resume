@@ -26,18 +26,18 @@
   }
 
   &__icon-gh {
-    background-image: url("../svg/icon-dribbble.svg");
+    background-image: url("../svg/icon-gh.svg");
 
     &:hover {
-      background-image: url("../svg/icon-dribbble-active.svg");
+      background-image: url("../svg/icon-gh-active.svg");
     }
   }
 
-  &__icon-twitter {
-    background-image: url("../svg/icon-twitter.svg");
+  &__icon-codewars {
+    background-image: url("../svg/icon-cw.svg");
 
     &:hover {
-      background-image: url("../svg/icon-twitter-active.svg");
+      background-image: url("../svg/icon-cw-active.svg");
     }
   }
 
