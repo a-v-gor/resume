@@ -68,7 +68,7 @@ export default function returnContacts() {
   );
   const contactDiscord = returnContact(
     'Discord',
-    'https://discord.com/users/alexey_gorbenko',
+    'https://discordapp.com/users/873419814985674802',
     '@alexey_gorbenko'
   );
   const contactEmail = returnContact(
