@@ -13,7 +13,7 @@ export default function returnExpertiseSection() {
           <li class="ord-list__item list__item">
             <article class="list__article">
               <h3 class="ord-list__title title">HTML/CSS</h3>
-              <p class="ord-list__text text">Валидная семантическая верстка в соответствии с требованиями HTML5. Верстка по PixelPerfect. Использование Flexbox, Grid. Препроцессор SCSS. Адаптивная и отзывчивая верстка mobile-first / desktop-first.</p>
+              <p class="ord-list__text text">Валидная семантическая верстка в соответствии с требованиями HTML5. Верстка по PixelPerfect. Использование Flexbox, Grid. Препроцессор SCSS. БЭМ. Адаптивная и отзывчивая верстка mobile-first / desktop-first.</p>
           </article>
             </li>
           <li class="ord-list__item list__item">
