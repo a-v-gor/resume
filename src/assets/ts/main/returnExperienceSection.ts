@@ -19,7 +19,7 @@ export default function returnExperienceSection() {
                 <p class="article-li__location">Ростов-на-Дону, РФ</p>
               </div>
               <div class="article-li__body">
-                <p class="article-li__text text">Самообучение по программам RSSchool. Укрепил знания в HTML, CSS. Порлучил знания в JavaScript и Typescript. Получен опыт командной работы и взаимодействия методами Agile-методологии. Выполнен ряд проектов (см. раздел «Портфолио» ниже).</p>
+                <p class="article-li__text text">Самообучение по программам RSSchool. Укрепил знания в HTML, CSS. Получил знания в JavaScript и Typescript. Получен опыт командной работы и взаимодействия методами Agile-методологии. Выполнен ряд проектов (см. раздел «Портфолио» ниже).</p>
               </div>
             </article>
           </li>
