@@ -59,7 +59,7 @@ export default function returnContacts() {
   const contactLocation = returnContact(
     'Местонахождение',
     'https://maps.app.goo.gl/awAMRVKcbUeYWu1h8',
-    'Ростов-на-Дону'
+    'Ростов-на-Дону, РФ'
   );
   const contactTelegram = returnContact(
     'Телеграм',
