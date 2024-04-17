@@ -13,7 +13,7 @@ export default function returnExperienceSection() {
           <li class="unord-list__item list__item evolution-ul__item experience__item">
             <article class="list__article article-li evolution-ul__article">
               <div class="article-li__header">
-                <h3 class="article-li__title title">Саморазвитие</h3>
+                <h3 class="article-li__title title">Петпроекты</h3>
                 <p class="article-li__period">2021 – Present</p>
                 <p class="article-li__position">Front-end разработчик</p>
                 <p class="article-li__location">Ростов-на-Дону, РФ</p>
