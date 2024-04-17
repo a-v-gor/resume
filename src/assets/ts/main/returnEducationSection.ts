@@ -6,7 +6,7 @@ export default function returnEducationSection() {
     <section class="section__wrapper article-block education">
       <div class="section__header section__block article-block__header education__header">
         <h2 class="article-block__title title">Образование</h2>
-        <p class="article-block__subtitle text">Per aspera ad astra.</p>
+        <p class="article-block__subtitle text">Scio me nihil scire.</p>
       </div>
       <div class="section__description section__block education__description">
         <ul class="article-block__ul unord-list list evolution-ul education__ul">
