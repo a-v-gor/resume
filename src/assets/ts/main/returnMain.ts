@@ -1,10 +1,8 @@
-import returnAwardsSection from './returnAwardsSection';
 import returnEducationSection from './returnEducationSection';
 import returnElement from '../common/returnElement';
 import returnExperienceSection from './returnExperienceSection';
 import returnExpertiseSection from './returnExpertiseSection';
 import returnIntroSection from './returnIntroSection';
-import returnProfilesSection from './returnProfilesSection';
 import returnPortfolioSection from './returnPortfolioSection';
 import returnClientsSection from './returnClientsSection';
 import returnSkillsSection from './returnSkillsSection';
@@ -19,8 +17,6 @@ export default function returnMain() {
   const sectionSkills = returnSkillsSection();
   const sectionExperience = returnExperienceSection();
   const sectionEducation = returnEducationSection();
-  const sectionProfiles = returnProfilesSection();
-  const sectionAwards = returnAwardsSection();
   const sectionPortfolio = returnPortfolioSection();
   const sectionClients = returnClientsSection();
 
@@ -30,8 +26,6 @@ export default function returnMain() {
     sectionSkills,
     sectionExperience,
     sectionEducation,
-    sectionProfiles,
-    sectionAwards,
     sectionPortfolio,
     sectionClients
   );
