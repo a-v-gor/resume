@@ -1,7 +1,7 @@
 .portfolio {
   &__description {
     display: grid;
-    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     padding-top: 5.7rem;
     padding-bottom: 5.9rem;
     gap: 1.9rem 2.5rem;

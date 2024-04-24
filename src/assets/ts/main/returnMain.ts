@@ -4,7 +4,6 @@ import returnExperienceSection from './returnExperienceSection';
 import returnExpertiseSection from './returnExpertiseSection';
 import returnIntroSection from './returnIntroSection';
 import returnPortfolioSection from './returnPortfolioSection';
-import returnClientsSection from './returnClientsSection';
 import returnSkillsSection from './returnSkillsSection';
 
 export default function returnMain() {
@@ -18,7 +17,6 @@ export default function returnMain() {
   const sectionExperience = returnExperienceSection();
   const sectionEducation = returnEducationSection();
   const sectionPortfolio = returnPortfolioSection();
-  const sectionClients = returnClientsSection();
 
   main.append(
     sectionIntro,
@@ -26,8 +24,7 @@ export default function returnMain() {
     sectionSkills,
     sectionExperience,
     sectionEducation,
-    sectionPortfolio,
-    sectionClients
+    sectionPortfolio
   );
   return main;
 }
