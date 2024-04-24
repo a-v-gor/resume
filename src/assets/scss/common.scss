@@ -24,6 +24,15 @@
   font-size: 1.4em;
 }
 
+.link {
+  color: $mark-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $active-link;
+  }
+}
+
 .section {
   &__wrapper {
     display: flex;

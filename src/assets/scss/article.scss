@@ -16,15 +16,6 @@
     }
   }
 
-  &__link {
-    color: $mark-color;
-    text-decoration: none;
-
-    &:hover {
-      color: $active-link;
-    }
-  }
-
   @media (width <= 1023px) {
     &__header {
       text-align: inherit;

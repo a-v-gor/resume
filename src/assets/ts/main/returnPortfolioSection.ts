@@ -19,9 +19,10 @@ export default function returnPortfolioSection() {
         <article class="portfolio__aritcle portfolio-article">
           <div class="portfolio-article__wrapper">
             <h3 class="portfolio-article__title title">Portfolio</h3>
-            <p class="portfolio-article__text text">Landing page портфолио фотографа, адаптивный и интерактивный (смена изображений, перевод на два языка, переключение светлой и тёмной темы, кастомный видеоплеер).</p>
-            <p class="portfolio-article__text text"><a href="https://a-v-gor.github.io/study-projects/portfolio/">Деплой</a></p>
-            <p class="portfolio-article__text text"><a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/portfolio/portfolio.md">Задание&nbsp;1.</a> <a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/js30%23/js30-3.md">Задание&nbsp;2.</a></p>
+            <p class="portfolio-article__text text">Landing page.</p>
+            <p class="portfolio-article__text text"><a class="portfolio-article__link link" href="https://a-v-gor.github.io/study-projects/portfolio/" target="_blank">Деплой</a></p>
+            <p class="portfolio-article__text text"><a class="portfolio-article__link link" href="https://github.com/a-v-gor/study-projects/tree/portfolio-part3" target="_blank">Github&nbsp;1</a>. <a class="portfolio-article__link link" href="https://github.com/a-v-gor/study-projects/tree/portfolio-video" target="_blank">Github&nbsp;2</a>.</p>
+            <p class="portfolio-article__text text"><a class="portfolio-article__link link" href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/portfolio/portfolio.md" target="_blank">Задание&nbsp;1</a>. <a class="portfolio-article__link link" href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/js30%23/js30-3.md" target="_blank">Задание&nbsp;2</a>.</p>
           </div>
           <img src=${imgPortfolio} alt="Musée du Louvre" class="portfolio-article__img">
         </article>
