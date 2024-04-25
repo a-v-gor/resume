@@ -1,7 +1,12 @@
 import returnSection from '../common/returnSection';
 
-import imgPortfolio from '../../img/portfolio_thumb.jpg';
-import imgMovieApp from '../../img/movie-app_thumb.jpg';
+import imgPortfolio from '../../img/proj-portfolio.jpg';
+import imgShelter from '../../img/proj-shelter.jpg';
+import imgMinesweeper from '../../img/proj-minesweeper.jpg';
+import imgCssSlider from '../../img/proj-cssMemSlider.jpg';
+import imgKeyboard from '../../img/proj-keyboard.png';
+import imgMovieApp from '../../img/proj-movie-app.jpg';
+import imgTicTacToe from '../../img/proj-tic-tac-toe.jpg';
 import returnElement from '../common/returnElement';
 
 function returnPortfolioParagraph(): HTMLElement {
@@ -128,7 +133,7 @@ export default function returnPortfolioSection() {
     'Адаптивный landing page с интерактивностью.',
     'https://a-v-gor.github.io/study-projects/portfolio/',
     [
-      'https://github.com/a-v-gor/study-projects/tree/portfolio-part3',
+      'https://github.com/a-v-gor/study-projects/tree/portfolio',
       'https://github.com/a-v-gor/study-projects/tree/portfolio-video',
     ],
     [
@@ -137,6 +142,50 @@ export default function returnPortfolioSection() {
     ],
     imgPortfolio,
     'Printscreen portfolio landing page'
+  );
+  const cssSliderArticle = returnArticle(
+    'CSS слайдер',
+    'Слайдер на чистом CSS.',
+    'https://a-v-gor.github.io/cssMemSlider/cssMemSlider/',
+    ['https://github.com/a-v-gor/cssMemSlider'],
+    [
+      'https://github.com/rolling-scopes-school/tasks/tree/master/tasks/css-meme-slider',
+    ],
+    imgCssSlider,
+    'Virtual keyboard application page'
+  );
+  const shelterArticle = returnArticle(
+    'Shelter',
+    'Адаптивный интерактивный сайт.',
+    'https://a-v-gor.github.io/study-projects/shelter/pages/main/',
+    ['https://github.com/a-v-gor/study-projects/tree/shelter'],
+    [
+      'https://github.com/rolling-scopes-school/tasks/blob/master/tasks/shelter/shelter.md',
+    ],
+    imgShelter,
+    'Shelter application page'
+  );
+  const minesweeperArticle = returnArticle(
+    'Сапер',
+    'Игра «Сапер».',
+    'https://a-v-gor.github.io/study-projects/minesweeper/',
+    ['https://github.com/a-v-gor/study-projects/tree/minesweeper'],
+    [
+      'https://github.com/rolling-scopes-school/tasks/blob/master/tasks/minesweeper/README.md',
+    ],
+    imgMinesweeper,
+    'Minesweeper application page'
+  );
+  const keyboardArticle = returnArticle(
+    'Виртуальная клавиатура',
+    'Виртуальная клавиатура.',
+    'https://a-v-gor.github.io/virtual-keyboard/',
+    ['https://github.com/a-v-gor/virtual-keyboard'],
+    [
+      'https://github.com/rolling-scopes-school/tasks/blob/master/tasks/virtual-keyboard/virtual-keyboard-en.md',
+    ],
+    imgKeyboard,
+    'Virtual keyboard application page'
   );
   const movieAppArticle = returnArticle(
     'Поисковик по видео',
@@ -149,8 +198,27 @@ export default function returnPortfolioSection() {
     imgMovieApp,
     'Printscreen movie application page'
   );
+  const ticTacToeArticle = returnArticle(
+    'Tic-tac-toe',
+    'Игра «крестики-нолики».',
+    'https://a-v-gor.github.io/study-projects/tic-tac-toe/',
+    ['https://github.com/a-v-gor/study-projects/tree/tic-tac-toe'],
+    [
+      'https://github.com/rolling-scopes-school/tasks/blob/master/tasks/js30%23/js30-7.md',
+    ],
+    imgTicTacToe,
+    'Tic-tac-toe page'
+  );
 
-  sectionDescription.append(portfolioArticle, movieAppArticle);
+  sectionDescription.append(
+    portfolioArticle,
+    shelterArticle,
+    minesweeperArticle,
+    cssSliderArticle,
+    keyboardArticle,
+    movieAppArticle,
+    ticTacToeArticle
+  );
   sectionHeader.append(sectionTitle, sectionSubtitle);
   sectionWrapper.append(sectionHeader, sectionDescription);
   portfolioSection.append(sectionWrapper);
