@@ -24,12 +24,12 @@ export default function returnFooter() {
   const footerTitle = returnElement({
     tag: 'h2',
     classes: ['article-block__title', 'title'],
-    textContent: 'Contact',
+    textContent: 'Контакты',
   });
   const footerSubtitle = returnElement({
     tag: 'p',
     classes: ['article-block__subtitle', 'text'],
-    textContent: 'Call me, maybe.',
+    textContent: 'Как со мной связаться.',
   });
   const footerDescription = returnElement({
     tag: 'div',
