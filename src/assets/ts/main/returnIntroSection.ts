@@ -1,16 +1,10 @@
-import returnSection from '../common/returnSection';
+import returnSection from '../common/returnSectionObject';
 
 export default function returnIntroSection() {
   const sectionObj = returnSection({
-    classes: ['section'],
     wrapperTag: 'article',
-    wrapperClasses: ['section__wrapper', 'article-block'],
-    headerClasses: [
-      'section__header',
-      'section__block',
-      'article-block__header',
-    ],
-    descriptionClasses: ['section__description', 'section__block'],
+    wrapperClasses: ['article-block'],
+    headerClasses: ['article-block__header'],
     title: 'О себе',
     subitle: 'Ключевые компетенции.',
   });

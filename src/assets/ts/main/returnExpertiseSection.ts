@@ -1,53 +1,68 @@
-import returnSectionOld from '../common/returnSection-old';
+import returnElement from '../common/returnElement';
+import returnSection from '../common/returnSectionObject';
+
+function returnListItem(itemTitle: string, itemText: string) {
+  const item = returnElement({
+    tag: 'li',
+    classes: ['ord-list__item', 'list__item'],
+  });
+  const article = returnElement({
+    tag: 'article',
+    classes: ['list__article'],
+  });
+  const title = returnElement({
+    tag: 'h3',
+    classes: ['ord-list__title', 'title'],
+    textContent: itemTitle,
+  });
+  const text = returnElement({
+    tag: 'p',
+    classes: ['ord-list__text', 'text'],
+    textContent: itemText,
+  });
+
+  article.append(title, text);
+  item.append(article);
+  return item;
+}
 
 export default function returnExpertiseSection() {
-  const expertiseSection = returnSectionOld();
-  expertiseSection.innerHTML = `
-    <section class="section__wrapper article-block">
-      <div class="section__header section__block article-block__header">
-        <h2 class="article-block__title title">Компетенции</h2>
-        <p class="article-block__subtitle text">Профессиональные знания.</p>
-      </div>
-      <div class="section__description section__block">
-        <ol class="article-block__ol ord-list list">
-          <li class="ord-list__item list__item">
-            <article class="list__article">
-              <h3 class="ord-list__title title">HTML/CSS</h3>
-              <p class="ord-list__text text">Валидная семантическая верстка в соответствии с требованиями HTML5. Верстка по PixelPerfect. Использование Flexbox, Grid. Препроцессор SCSS. БЭМ. Адаптивная и отзывчивая верстка mobile-first / desktop-first.</p>
-          </article>
-            </li>
-          <li class="ord-list__item list__item">
-            <article class="list__article ord-list__article">
-              <h3 class="ord-list__title title">JavaScript</h3>
-              <p class="ord-list__text text">ES6. Типы данных, функции, объекты, классы, методы. Прототипы, наследование. Обработка ошибок. Замыкания. Промисы: fetch, async/await. Работа с DOM, события, жизненный цикл страницы. Модули. Web storage.</p>
-            </article>
-            </li>
-          <li class="ord-list__item list__item">
-            <article class="list__article ord-list__article">
-              <h3 class="ord-list__title title">Typescript</h3>
-              <p class="ord-list__text text">Базовые типы. Типы, интерфейсы. Дженерики. Объединения / пересечения типов. Избегание типа 'any'.</p>
-            </article>
-          </li>
-          <li class="ord-list__item list__item">
-            <article class="list__article ord-list__article">
-              <h3 class="ord-list__title title">Программное обеспечение</h3>
-              <p class="ord-list__text text">Visual Studio Code, Chrome DevTools, PixelPerfect, Figma, GIMP, Inkscape, Adobe Photoshop.</p>
-            </article>
-          </li>
-          <li class="ord-list__item list__item">
-            <article class="list__article ord-list__article">
-              <h3 class="ord-list__title title">Средства разработки</h3>
-              <p class="ord-list__text text">Webpack, Typescript, Eslint, Stylelint, Prettier, Husky, SASS</p>
-            </article>
-          </li>
-          <li class="ord-list__item list__item">
-            <article class="list__article ord-list__article">
-              <h3 class="ord-list__title title">Работа в команде</h3>
-              <p class="ord-list__text text">Agile-методология: Scrum, Kanban (Trello, Asana, GitHub Desktop). </p>
-            </article>
-          </li>
-        </ol>
-      </div>
-    </section>`;
-  return expertiseSection;
+  const sectionObj = returnSection({
+    wrapperClasses: ['article-block'],
+    headerClasses: ['article-block__header'],
+    title: 'Компетенции',
+    subitle: 'Профессиональные знания.',
+  });
+  const list = returnElement({
+    tag: 'ol',
+    classes: ['rticle-block__ol', 'ord-list', 'list'],
+  });
+
+  const itemHTML = returnListItem(
+    'HTML/CSS',
+    'Валидная семантическая верстка в соответствии с требованиями HTML5. Верстка по PixelPerfect. Использование Flexbox, Grid. Препроцессор SCSS. БЭМ. Адаптивная и отзывчивая верстка mobile-first / desktop-first.'
+  );
+  const itemJS = returnListItem(
+    'JavaScript',
+    'ES6. Типы данных, функции, объекты, классы, методы. Прототипы, наследование. Обработка ошибок. Замыкания. Промисы: fetch, async/await. Работа с DOM, события, жизненный цикл страницы. Модули. Web storage.'
+  );
+  const itemTS = returnListItem(
+    'Typescript',
+    'Базовые типы. Типы, интерфейсы. Дженерики. Объединения / пересечения типов. Избегание типа «any».'
+  );
+  const itemSoftware = returnListItem(
+    'Программное обеспечение',
+    'Visual Studio Code, Chrome DevTools, PixelPerfect, Figma, GIMP, Inkscape, Adobe Photoshop.'
+  );
+  const itemDevelop = returnListItem(
+    'Средства разработки',
+    'Webpack, Typescript, Eslint, Stylelint, Prettier, Husky, SASS.'
+  );
+  const itemTeam = returnListItem(
+    'Работа в команде',
+    'Agile-методология: Scrum, Kanban (Trello, Asana, GitHub Desktop).'
+  );
+  list.append(itemHTML, itemJS, itemTS, itemSoftware, itemDevelop, itemTeam);
+  sectionObj.description.append(list);
+  return sectionObj.section;
 }

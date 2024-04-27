@@ -4,20 +4,16 @@ import returnPersonalDescriptionText from './common/returnPersonalDescriptionTex
 import returnSocials from './common/returnSocials';
 import returnContacts from './common/returnContacts';
 
-import returnSection from './common/returnSection';
+import returnSection from './common/returnSectionObject';
 
 export default function returnHeader() {
   const headerObj = returnSection({
     tag: 'header',
-    classes: ['header', 'section'],
+    classes: ['header'],
     wrapperTag: 'article',
-    wrapperClasses: ['header__wrapper', 'section__wrapper', 'personal'],
-    headerClasses: ['section__header', 'section__block', 'header__header'],
-    descriptionClasses: [
-      'section__description',
-      'section__block',
-      'header__description',
-    ],
+    wrapperClasses: ['header__wrapper', 'personal'],
+    headerClasses: ['header__header'],
+    descriptionClasses: ['header__description'],
   });
 
   const section = headerObj.section;
