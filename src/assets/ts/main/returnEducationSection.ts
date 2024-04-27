@@ -1,7 +1,7 @@
-import returnSection from '../common/returnSection';
+import returnSectionOld from '../common/returnSection-old';
 
 export default function returnEducationSection() {
-  const educationSection = returnSection();
+  const educationSection = returnSectionOld();
   educationSection.innerHTML = `
     <section class="section__wrapper article-block education">
       <div class="section__header section__block article-block__header education__header">

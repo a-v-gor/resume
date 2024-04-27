@@ -1,4 +1,4 @@
-import returnSection from '../common/returnSection';
+import returnSectionOld from '../common/returnSection-old';
 
 import imgPortfolio from '../../img/proj-portfolio.jpg';
 import imgShelter from '../../img/proj-shelter.jpg';
@@ -96,7 +96,7 @@ function returnArticle(
 }
 
 export default function returnPortfolioSection() {
-  const portfolioSection = returnSection();
+  const portfolioSection = returnSectionOld();
   const sectionWrapper = returnElement({
     tag: 'section',
     classes: ['section__wrapper', 'article-block', 'portfolio'],

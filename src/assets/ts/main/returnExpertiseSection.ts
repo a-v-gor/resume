@@ -1,7 +1,7 @@
-import returnSection from '../common/returnSection';
+import returnSectionOld from '../common/returnSection-old';
 
 export default function returnExpertiseSection() {
-  const expertiseSection = returnSection();
+  const expertiseSection = returnSectionOld();
   expertiseSection.innerHTML = `
     <section class="section__wrapper article-block">
       <div class="section__header section__block article-block__header">

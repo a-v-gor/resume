@@ -1,7 +1,7 @@
-import returnSection from '../common/returnSection';
+import returnSectionOld from '../common/returnSection-old';
 
 export default function returnExperienceSection() {
-  const experienceSection = returnSection();
+  const experienceSection = returnSectionOld();
   experienceSection.innerHTML = `
     <section class="section__wrapper article-block experience">
       <div class="section__header section__block article-block__header experience__header">

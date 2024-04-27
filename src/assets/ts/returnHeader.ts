@@ -1,38 +1,40 @@
 import returnElement from './common/returnElement';
+import imgAvatar from '../img/avatar.jpg';
+import returnPersonalDescriptionText from './common/returnPersonalDescriptionText';
 import returnSocials from './common/returnSocials';
 import returnContacts from './common/returnContacts';
-import returnPersonalDescriptionText from './common/returnPersonalDescriptionText';
 
-import imgAvatar from '../img/avatar.jpg';
+import returnSection from './common/returnSection';
 
 export default function returnHeader() {
-  const header = returnElement({
+  const headerObj = returnSection({
     tag: 'header',
     classes: ['header', 'section'],
+    wrapperTag: 'article',
+    wrapperClasses: ['header__wrapper', 'section__wrapper', 'personal'],
+    headerClasses: ['section__header', 'section__block', 'header__header'],
+    descriptionClasses: [
+      'section__description',
+      'section__block',
+      'header__description',
+    ],
   });
-  const headerArticle = returnElement({
-    tag: 'article',
-    classes: ['header__wrapper', 'section__wrapper', 'personal'],
-  });
-  const headerArticleTitle = returnElement({
+
+  const section = headerObj.section;
+  const header = headerObj.header;
+  const title = returnElement({
     tag: 'h2',
     classes: ['section__title'],
     textContent: 'Личная информация',
   });
-  const headerHeader = returnElement({
-    tag: 'div',
-    classes: ['section__header', 'section__block', 'header__header'],
-  });
-  const headerPhoto = returnElement({
+  const photo = returnElement({
     tag: 'img',
     classes: ['header__photo'],
     src: imgAvatar,
-    attrib: [{ name: 'alt', value: "Desmond's photo" }],
+    attrib: [{ name: 'alt', value: 'А.Горбенко' }],
   });
-  const headerDescription = returnElement({
-    tag: 'div',
-    classes: ['section__description', 'section__block', 'header__description'],
-  });
+  header.append(title, photo);
+
   const personalWrapper = returnElement({
     tag: 'div',
     classes: ['header__descr-wrapper', 'personal__wrapper'],
@@ -48,10 +50,9 @@ export default function returnHeader() {
     headerSocials,
     headerContacts
   );
-  headerDescription.append(personalWrapper);
-  headerHeader.append(headerPhoto);
-  headerArticle.append(headerArticleTitle, headerHeader, headerDescription);
-  header.append(headerArticle);
 
-  return header;
+  const description = headerObj.description;
+  description.append(personalWrapper);
+
+  return section;
 }

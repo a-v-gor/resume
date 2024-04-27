@@ -1,7 +1,7 @@
-import returnSection from '../common/returnSection';
+import returnSectionOld from '../common/returnSection-old';
 
 export default function returnProfilesSection() {
-  const profilesSection = returnSection();
+  const profilesSection = returnSectionOld();
   profilesSection.innerHTML = `
     <section class="section__wrapper article-block profiles">
       <div class="section__header section__block article-block__header profiles__header">
