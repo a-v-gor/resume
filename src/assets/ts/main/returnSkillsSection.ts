@@ -1,47 +1,80 @@
-import returnSectionOld from '../common/returnSection-old';
+import returnElement from '../common/returnElement';
+import returnSectionObject from '../common/returnSectionObject';
+
+function returnSkillsItem(numPercent: string, id: string, labelString: string) {
+  const item = returnElement({
+    tag: 'li',
+    classes: ['unord-list__item', 'list__item', 'item', 'skills__item'],
+  });
+  const percentBlock = returnElement({
+    tag: 'div',
+    classes: ['item__percent'],
+    textContent: numPercent,
+  });
+  const labelElement = returnElement({
+    tag: 'label',
+    classes: ['item__label'],
+    attrib: [
+      {
+        name: 'for',
+        value: id,
+      },
+    ],
+    textContent: labelString,
+  });
+  const progressElement = returnElement({
+    tag: 'progress',
+    classes: ['item__progress'],
+    attrib: [
+      {
+        name: 'id',
+        value: id,
+      },
+      {
+        name: 'max',
+        value: '100',
+      },
+      {
+        name: 'value',
+        value: numPercent,
+      },
+    ],
+  });
+
+  item.append(percentBlock, labelElement, progressElement);
+  return item;
+}
 
 export default function returnSkillsSection() {
-  const skillsSection = returnSectionOld();
-  skillsSection.innerHTML = `
-    <article class="section__wrapper article skills">
-      <div class="section__header section__block article-block__header skills__header">
-        <h2 class="article-block__title title">Компетенции</h2>
-        <p class="article-block__subtitle text">Профессиональные навыки.</p>
-      </div>
-      <div class="section__description section__block skills__description">
-        <ul class="article-block__ul unord-list list skills__list">
-          <li class="unord-list__item list__item item skills__item">
-            <div class="item__percent">90</div>
-            <label for="html" class="item__label">HTML</label>
-            <progress class="item__progress" id="html" max="100" value="90"></progress>
-          </li>
-          <li class="unord-list__item list__item item skills__item">
-            <div class="item__percent">50</div>
-            <label for="css3" class="item__label">CSS3 animation</label>
-            <progress class="item__progress" id="css3" max="100" value="50"></progress>
-          </li>
-          <li class="unord-list__item list__item item skills__item">
-            <div class="item__percent">65</div>
-            <label for="css3" class="item__label">Typescript</label>
-            <progress class="item__progress" id="css3" max="100" value="65"></progress>
-          </li>
-          <li class="unord-list__item list__item item skills__item">
-            <div class="item__percent">80</div>
-            <label for="git" class="item__label">GIT</label>
-            <progress class="item__progress" id="git" max="100" value="80"></progress>
-          </li>
-          <li class="unord-list__item list__item item skills__item">
-            <div class="item__percent">95</div>
-            <label for="webpack" class="item__label">Webpack</label>
-            <progress class="item__progress" id="webpack" max="100" value="95"></progress>
-          </li>
-          <li class="unord-list__item list__item item skills__item">
-            <div class="item__percent">90</div>
-            <label for="seo" class="item__label">SEO</label>
-            <progress class="item__progress" id="seo" max="100" value="90"></progress>
-          </li>
-        </ul>
-      </div>
-    </article>`;
-  return skillsSection;
+  const skillsSection = returnSectionObject({
+    wrapperTag: 'article',
+    wrapperClasses: ['section__wrapper', 'article', 'skills'],
+    headerClasses: ['article-block__header', 'skills__header'],
+    descriptionClasses: ['skills__description'],
+    title: 'Компетенции',
+    subitle: 'Профессиональные навыки.',
+  });
+
+  const skillsList = returnElement({
+    tag: 'ul',
+    classes: ['article-block__ul', 'unord-list', 'list', 'skills__list'],
+  });
+
+  const htmlElement = returnSkillsItem('90', 'html', 'HTML');
+  const cssElement = returnSkillsItem('50', 'css3', 'CSS3 animation');
+  const tsElement = returnSkillsItem('65', 'ts', 'Typescript');
+  const gitElement = returnSkillsItem('80', 'git', 'GIT');
+  const webpackElement = returnSkillsItem('95', 'webpack', 'Webpack');
+  const seoElement = returnSkillsItem('90', 'seo', 'SEO');
+
+  skillsList.append(
+    htmlElement,
+    cssElement,
+    tsElement,
+    gitElement,
+    webpackElement,
+    seoElement
+  );
+  skillsSection.description.append(skillsList);
+  return skillsSection.section;
 }

@@ -1,7 +1,7 @@
-import returnSection from '../common/returnSectionObject';
+import returnSectionObject from '../common/returnSectionObject';
 
 export default function returnIntroSection() {
-  const sectionObj = returnSection({
+  const sectionObj = returnSectionObject({
     wrapperTag: 'article',
     wrapperClasses: ['article-block'],
     headerClasses: ['article-block__header'],

@@ -1,5 +1,5 @@
 import returnElement from '../common/returnElement';
-import returnSection from '../common/returnSectionObject';
+import returnSectionObject from '../common/returnSectionObject';
 
 function returnListItem(itemTitle: string, itemText: string) {
   const item = returnElement({
@@ -27,7 +27,7 @@ function returnListItem(itemTitle: string, itemText: string) {
 }
 
 export default function returnExpertiseSection() {
-  const sectionObj = returnSection({
+  const sectionObj = returnSectionObject({
     wrapperClasses: ['article-block'],
     headerClasses: ['article-block__header'],
     title: 'Компетенции',

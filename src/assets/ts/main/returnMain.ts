@@ -11,17 +11,17 @@ export default function returnMain() {
     tag: 'main',
     classes: ['main'],
   });
-  const sectionIntro = returnIntroSection();
-  const sectionExpertise = returnExpertiseSection();
-  const sectionSkills = returnSkillsSection();
+  const introSection = returnIntroSection();
+  const expertiseSection = returnExpertiseSection();
+  const skillsSection = returnSkillsSection();
   const sectionExperience = returnExperienceSection();
   const sectionEducation = returnEducationSection();
   const sectionPortfolio = returnPortfolioSection();
 
   main.append(
-    sectionIntro,
-    sectionExpertise,
-    sectionSkills,
+    introSection,
+    expertiseSection,
+    skillsSection,
     sectionExperience,
     sectionEducation,
     sectionPortfolio

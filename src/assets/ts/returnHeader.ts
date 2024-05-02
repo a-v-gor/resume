@@ -4,10 +4,10 @@ import returnPersonalDescriptionText from './common/returnPersonalDescriptionTex
 import returnSocials from './common/returnSocials';
 import returnContacts from './common/returnContacts';
 
-import returnSection from './common/returnSectionObject';
+import returnSectionObject from './common/returnSectionObject';
 
 export default function returnHeader() {
-  const headerObj = returnSection({
+  const headerObj = returnSectionObject({
     tag: 'header',
     classes: ['header'],
     wrapperTag: 'article',
@@ -16,8 +16,6 @@ export default function returnHeader() {
     descriptionClasses: ['header__description'],
   });
 
-  const section = headerObj.section;
-  const header = headerObj.header;
   const title = returnElement({
     tag: 'h2',
     classes: ['section__title'],
@@ -29,7 +27,7 @@ export default function returnHeader() {
     src: imgAvatar,
     attrib: [{ name: 'alt', value: 'А.Горбенко' }],
   });
-  header.append(title, photo);
+  headerObj.header.append(title, photo);
 
   const personalWrapper = returnElement({
     tag: 'div',
@@ -50,5 +48,5 @@ export default function returnHeader() {
   const description = headerObj.description;
   description.append(personalWrapper);
 
-  return section;
+  return headerObj.section;
 }

@@ -17,7 +17,7 @@ interface resultObj {
   description: HTMLElement;
 }
 
-export default function returnSection(props: Props): resultObj {
+export default function returnSectionObject(props: Props): resultObj {
   let tag = '';
   let classes = ['section'];
   let wrapperTag = 'section';
