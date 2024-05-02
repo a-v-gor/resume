@@ -14,7 +14,7 @@ export default function returnMain() {
   const introSection = returnIntroSection();
   const expertiseSection = returnExpertiseSection();
   const skillsSection = returnSkillsSection();
-  const sectionExperience = returnExperienceSection();
+  const experienceSection = returnExperienceSection();
   const sectionEducation = returnEducationSection();
   const sectionPortfolio = returnPortfolioSection();
 
@@ -22,7 +22,7 @@ export default function returnMain() {
     introSection,
     expertiseSection,
     skillsSection,
-    sectionExperience,
+    experienceSection,
     sectionEducation,
     sectionPortfolio
   );
