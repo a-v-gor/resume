@@ -15,16 +15,16 @@ export default function returnMain() {
   const expertiseSection = returnExpertiseSection();
   const skillsSection = returnSkillsSection();
   const experienceSection = returnExperienceSection();
-  const sectionEducation = returnEducationSection();
-  const sectionPortfolio = returnPortfolioSection();
+  const educationSection = returnEducationSection();
+  const portfolioSection = returnPortfolioSection();
 
   main.append(
     introSection,
     expertiseSection,
     skillsSection,
     experienceSection,
-    sectionEducation,
-    sectionPortfolio
+    educationSection,
+    portfolioSection
   );
   return main;
 }

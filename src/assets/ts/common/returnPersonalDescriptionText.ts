@@ -7,7 +7,7 @@ export default function returnPersonalDescriptionText() {
   });
   const personalName = returnElement({
     tag: 'div',
-    classes: ['personal__name'],
+    classes: ['personal__name', 'interactive'],
   });
   const personalFName = returnElement({
     tag: 'span',
@@ -24,7 +24,7 @@ export default function returnPersonalDescriptionText() {
   });
   const personalPosition = returnElement({
     tag: 'div',
-    classes: ['personal__position'],
+    classes: ['personal__position', 'interactive'],
     textContent: 'Front-end-разработчик',
   });
 

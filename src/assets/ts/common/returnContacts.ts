@@ -3,7 +3,7 @@ import returnElement from './returnElement';
 function returnContact(header: string, href: string, descr: string) {
   const contact = returnElement({
     tag: 'article',
-    classes: ['contacts__contact', 'contact'],
+    classes: ['contacts__contact', 'contact', 'interactive'],
   });
 
   const contactTitle = returnElement({

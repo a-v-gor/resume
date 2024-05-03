@@ -12,7 +12,7 @@ export default function returnSocials() {
   });
   const linkHabr = returnElement({
     tag: 'a',
-    classes: ['socials__link'],
+    classes: ['socials__link', 'interactive'],
     attrib: [
       {
         name: 'href',
@@ -30,7 +30,7 @@ export default function returnSocials() {
   });
   const linkGH = returnElement({
     tag: 'a',
-    classes: ['socials__link'],
+    classes: ['socials__link', 'interactive'],
     attrib: [
       {
         name: 'href',
@@ -48,7 +48,7 @@ export default function returnSocials() {
   });
   const linkCW = returnElement({
     tag: 'a',
-    classes: ['socials__link'],
+    classes: ['socials__link', 'interactive'],
     attrib: [
       {
         name: 'href',

@@ -16,23 +16,4 @@
 @import "portfolio";
 @import "clients";
 @import "footer";
-
-// Make element visible
-
-
-// &__fname {
-//   transform: translateY(0) scale(1);
-//   transition: transform 1.2s ease 0.7s, opacity 1.2s ease 0.7s;
-
-//   &_unactive {
-//     visibility: hidden;
-//     opacity: 0;
-//   }
-
-//   &_active {
-//     visibility: visible;
-//     opacity: 1;
-//   }
-// }
-
-// own
+@import "interactive";
