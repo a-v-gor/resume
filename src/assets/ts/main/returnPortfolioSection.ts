@@ -1,5 +1,3 @@
-import returnSectionOld from '../common/returnSection-old';
-
 import imgPortfolio from '../../img/proj-portfolio.jpg';
 import imgShelter from '../../img/proj-shelter.jpg';
 import imgMinesweeper from '../../img/proj-minesweeper.jpg';
@@ -8,6 +6,7 @@ import imgKeyboard from '../../img/proj-keyboard.png';
 import imgMovieApp from '../../img/proj-movie-app.jpg';
 import imgTicTacToe from '../../img/proj-tic-tac-toe.jpg';
 import returnElement from '../common/returnElement';
+import returnSectionObject from '../common/returnSectionObject';
 
 function returnPortfolioParagraph(): HTMLElement {
   const portfolioParagraph = returnElement({
@@ -96,37 +95,17 @@ function returnArticle(
 }
 
 export default function returnPortfolioSection() {
-  const portfolioSection = returnSectionOld();
-  const sectionWrapper = returnElement({
-    tag: 'section',
-    classes: ['section__wrapper', 'article-block', 'portfolio'],
-  });
-  const sectionHeader = returnElement({
-    tag: 'div',
-    classes: [
+  const portfolioSectionObject = returnSectionObject({
+    wrapperClasses: ['article-block', 'portfolio'],
+    headerClasses: [
       'section__header',
       'section__block',
       'article-block__header',
       'portfolio__header',
     ],
-  });
-  const sectionTitle = returnElement({
-    tag: 'h2',
-    classes: ['article-block__title', 'title'],
-    textContent: 'Портфолио',
-  });
-  const sectionSubtitle = returnElement({
-    tag: 'p',
-    classes: ['article-block__subtitle', 'text'],
-    textContent: 'Выполненные проекты.',
-  });
-  const sectionDescription = returnElement({
-    tag: 'div',
-    classes: [
-      'section__description',
-      'section__block',
-      'portfolio__description',
-    ],
+    descriptionClasses: ['portfolio__description'],
+    title: 'Портфолио',
+    subitle: 'Выполненные проекты.',
   });
   const portfolioArticle = returnArticle(
     'Portfolio',
@@ -210,7 +189,7 @@ export default function returnPortfolioSection() {
     'Tic-tac-toe page'
   );
 
-  sectionDescription.append(
+  portfolioSectionObject.description.append(
     portfolioArticle,
     shelterArticle,
     minesweeperArticle,
@@ -219,9 +198,6 @@ export default function returnPortfolioSection() {
     movieAppArticle,
     ticTacToeArticle
   );
-  sectionHeader.append(sectionTitle, sectionSubtitle);
-  sectionWrapper.append(sectionHeader, sectionDescription);
-  portfolioSection.append(sectionWrapper);
 
-  return portfolioSection;
+  return portfolioSectionObject.section;
 }
