@@ -47,12 +47,5 @@ export default function returnHeader() {
 
   const description = headerObj.description;
   description.append(personalWrapper);
-
-  function logOk() {
-    const domRect = headerObj.section.getBoundingClientRect();
-    console.log(domRect);
-  }
-
-  window.addEventListener('scroll', logOk);
   return headerObj.section;
 }

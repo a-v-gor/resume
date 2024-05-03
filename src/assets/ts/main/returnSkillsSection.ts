@@ -46,7 +46,7 @@ function returnSkillsItem(numPercent: string, id: string, labelString: string) {
 }
 
 export default function returnSkillsSection() {
-  const skillsSection = returnSectionObject({
+  const skillsSectionObject = returnSectionObject({
     wrapperTag: 'article',
     wrapperClasses: ['section__wrapper', 'article', 'skills'],
     headerClasses: ['article-block__header', 'skills__header'],
@@ -75,6 +75,6 @@ export default function returnSkillsSection() {
     webpackElement,
     seoElement
   );
-  skillsSection.description.append(skillsList);
-  return skillsSection.section;
+  skillsSectionObject.description.append(skillsList);
+  return skillsSectionObject.section;
 }
