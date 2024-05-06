@@ -1,14 +1,15 @@
 import './assets/scss/style.scss';
-import { checkSkillsView, zeroSkills } from './assets/ts/interactive/skills';
+import { checkSkillsView } from './assets/ts/interactive/skills';
 import {
   makeInteractiveHide,
-  makeInteractiveVisible,
+  makeInteractiveHeaderVisible,
+  makeInteractiveFooterVisible,
 } from './assets/ts/interactive/visible';
 import './assets/ts/returnPage';
 import returnPage from './assets/ts/returnPage';
 
 document.addEventListener('DOMContentLoaded', returnPage);
 document.addEventListener('DOMContentLoaded', makeInteractiveHide);
-document.addEventListener('DOMContentLoaded', zeroSkills);
-window.addEventListener('load', makeInteractiveVisible);
-window.addEventListener('scroll', checkSkillsView);
+window.addEventListener('load', makeInteractiveHeaderVisible);
+document.addEventListener('scroll', checkSkillsView);
+document.addEventListener('scrollend', makeInteractiveFooterVisible);

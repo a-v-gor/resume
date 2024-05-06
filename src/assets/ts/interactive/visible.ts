@@ -1,23 +1,41 @@
-function returnInteractiveNodes() {
-  return document.querySelectorAll('.interactive');
+function returnInteractiveNodes(select: string) {
+  const selector =
+    select === 'all'
+      ? '.interactive'
+      : select === 'header'
+        ? '.header .interactive'
+        : '.footer .interactive';
+  return document.querySelectorAll(selector);
 }
 function makeInteractiveHide() {
-  const nodesToHide = returnInteractiveNodes();
+  const nodesToHide = returnInteractiveNodes('all');
   nodesToHide.forEach((element) => {
     element.classList.add('interactive_unactive');
   });
 }
-function makeInteractiveVisible() {
-  const nodesToShow = returnInteractiveNodes();
+function makeNodesVisible(nodes: NodeList) {
   let timeToWait = 0;
 
-  nodesToShow.forEach((element) => {
+  nodes.forEach((element) => {
     function showElement() {
-      element.classList.replace('interactive_unactive', 'interactive_active');
+      const el: HTMLElement = <HTMLElement>element;
+      el.classList.replace('interactive_unactive', 'interactive_active');
     }
     setTimeout(showElement, timeToWait);
     timeToWait += 220;
   });
 }
+function makeInteractiveHeaderVisible() {
+  const nodesToShow = returnInteractiveNodes('header');
+  makeNodesVisible(nodesToShow);
+}
+function makeInteractiveFooterVisible() {
+  const nodesToShow = returnInteractiveNodes('footer');
+  makeNodesVisible(nodesToShow);
+}
 
-export { makeInteractiveHide, makeInteractiveVisible };
+export {
+  makeInteractiveHide,
+  makeInteractiveHeaderVisible,
+  makeInteractiveFooterVisible,
+};

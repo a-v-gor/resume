@@ -2,25 +2,11 @@ function returnSkills() {
   return document.querySelectorAll('.item__progress');
 }
 
-function zeroSkills() {
-  const skills = returnSkills();
-  skills.forEach((item) => {
-    item.setAttribute('value', '0');
-  });
-}
-
-function showSkillsProgress() {
-  const progressNodeList = document.querySelectorAll('.item__percent');
-  const percents: string[] = [];
-  progressNodeList.forEach((item) => {
-    const percent: string = <string>item.textContent;
-    percents.push(percent);
-  });
-
+function showSkillsProgress(dataArr: string[]) {
   const skills = returnSkills();
   skills.forEach((item, index) => {
-    if (item.getAttribute('value') === '0') {
-      item.setAttribute('value', percents[index]);
+    if (item.getAttribute('value') !== dataArr[index]) {
+      item.setAttribute('value', dataArr[index]);
     }
   });
 }
@@ -31,9 +17,17 @@ function checkSkillsView() {
   );
   const domRect = skillsSection.getBoundingClientRect();
   if (domRect.bottom <= window.innerHeight && domRect.top > 0) {
-    console.log('show!');
-    showSkillsProgress();
+    const progressNodeList = document.querySelectorAll('.item__percent');
+    const percents: string[] = [];
+    progressNodeList.forEach((item) => {
+      const percent: string = <string>item.textContent;
+      percents.push(percent);
+    });
+    showSkillsProgress(percents);
+  } else if (domRect.bottom < 0 || domRect.top > window.innerHeight) {
+    const dataArr: string[] = <string[]>new Array(6).fill('0');
+    showSkillsProgress(dataArr);
   }
 }
 
-export { zeroSkills, checkSkillsView };
+export { checkSkillsView };
