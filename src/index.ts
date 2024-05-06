@@ -1,5 +1,5 @@
 import './assets/scss/style.scss';
-import zeroSkills from './assets/ts/interactive/skills';
+import { checkSkillsView, zeroSkills } from './assets/ts/interactive/skills';
 import {
   makeInteractiveHide,
   makeInteractiveVisible,
@@ -11,3 +11,4 @@ document.addEventListener('DOMContentLoaded', returnPage);
 document.addEventListener('DOMContentLoaded', makeInteractiveHide);
 document.addEventListener('DOMContentLoaded', zeroSkills);
 window.addEventListener('load', makeInteractiveVisible);
+window.addEventListener('scroll', checkSkillsView);
