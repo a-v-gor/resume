@@ -3,8 +3,8 @@ import imgAvatar from '../img/avatar.jpg';
 import returnPersonalDescriptionText from './common/returnPersonalDescriptionText';
 import returnSocials from './common/returnSocials';
 import returnContacts from './common/returnContacts';
-
 import returnSectionObject from './common/returnSectionObject';
+import { pageElements } from './common/pageElements';
 
 export default function returnHeader() {
   const headerObj = returnSectionObject({
@@ -47,5 +47,7 @@ export default function returnHeader() {
 
   const description = headerObj.description;
   description.append(personalWrapper);
+  pageElements.header = headerObj.header;
+
   return headerObj.section;
 }

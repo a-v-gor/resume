@@ -1,3 +1,4 @@
+import { pageElements } from '../common/pageElements';
 import returnElement from '../common/returnElement';
 import returnSectionObject from '../common/returnSectionObject';
 
@@ -76,5 +77,6 @@ export default function returnSkillsSection() {
     seoElement
   );
   skillsSectionObject.description.append(skillsList);
+  pageElements.skills = skillsSectionObject.section;
   return skillsSectionObject.section;
 }
