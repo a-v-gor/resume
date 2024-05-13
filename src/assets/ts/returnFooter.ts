@@ -1,44 +1,21 @@
+import { pageElements } from './common/pageElements';
 import returnContacts from './common/returnContacts';
 import returnElement from './common/returnElement';
 import returnPersonalDescriptionText from './common/returnPersonalDescriptionText';
+import returnSectionObject from './common/returnSectionObject';
 import returnSocials from './common/returnSocials';
 
 export default function returnFooter() {
-  const footer = returnElement({
+  const footerObject = returnSectionObject({
     tag: 'footer',
-    classes: ['footer', 'section', 'personal'],
+    classes: ['footer', 'personal'],
+    wrapperClasses: ['article-block', 'contact-section'],
+    headerClasses: ['article-block__header', 'contact-section__header'],
+    title: 'Контакты',
+    subitle: 'Как со мной связаться.',
+    descriptionClasses: ['contact-section__description'],
   });
-  const footerWrapper = returnElement({
-    tag: 'section',
-    classes: ['section__wrapper', 'article-block', 'contact-section'],
-  });
-  const footerHeader = returnElement({
-    tag: 'div',
-    classes: [
-      'section__header',
-      'section__block',
-      'article-block__header',
-      'contact-section__header',
-    ],
-  });
-  const footerTitle = returnElement({
-    tag: 'h2',
-    classes: ['article-block__title', 'title'],
-    textContent: 'Контакты',
-  });
-  const footerSubtitle = returnElement({
-    tag: 'p',
-    classes: ['article-block__subtitle', 'text'],
-    textContent: 'Как со мной связаться.',
-  });
-  const footerDescription = returnElement({
-    tag: 'div',
-    classes: [
-      'section__description',
-      'section__block',
-      'contact-section__description',
-    ],
-  });
+
   const footerContacts = returnContacts();
   footerContacts.classList.add('footer__contacts');
   const footerArticle = returnElement({
@@ -59,9 +36,7 @@ export default function returnFooter() {
 
   personalWrapper.append(personalDescriptionText, socials);
   footerArticle.append(footerArticleTitle, personalWrapper);
-  footerDescription.append(footerContacts, footerArticle);
-  footerHeader.append(footerTitle, footerSubtitle);
-  footerWrapper.append(footerHeader, footerDescription);
-  footer.append(footerWrapper);
-  return footer;
+  footerObject.description.append(footerContacts, footerArticle);
+  pageElements.footer = footerObject.section;
+  return footerObject.section;
 }
