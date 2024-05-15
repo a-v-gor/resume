@@ -1,41 +1,61 @@
-function returnInteractiveNodes(select: string) {
-  const selector =
-    select === 'all'
-      ? '.interactive'
-      : select === 'header'
-        ? '.header .interactive'
-        : '.footer .interactive';
-  return document.querySelectorAll(selector);
-}
-function makeInteractiveHide() {
-  const nodesToHide = returnInteractiveNodes('all');
-  nodesToHide.forEach((element) => {
-    element.classList.add('interactive_unactive');
-  });
-}
+import { pageElements } from '../common/pageElements';
+
 function makeNodesVisible(nodes: NodeList) {
   let timeToWait = 0;
-
   nodes.forEach((element) => {
     function showElement() {
       const el: HTMLElement = <HTMLElement>element;
-      el.classList.replace('interactive_unactive', 'interactive_active');
+      el.classList.remove('interactive_unactive');
     }
     setTimeout(showElement, timeToWait);
-    timeToWait += 220;
+    timeToWait += 100;
   });
 }
-function makeInteractiveHeaderVisible() {
-  const nodesToShow = returnInteractiveNodes('header');
-  makeNodesVisible(nodesToShow);
-}
-function makeInteractiveFooterVisible() {
-  const nodesToShow = returnInteractiveNodes('footer');
-  makeNodesVisible(nodesToShow);
+
+function hideElement(element: HTMLElement): void {
+  element.classList.add('interactive_unactive');
 }
 
-export {
-  makeInteractiveHide,
-  makeInteractiveHeaderVisible,
-  makeInteractiveFooterVisible,
-};
+function returnPageElements(): HTMLElement[] {
+  return [pageElements.header, pageElements.footer];
+}
+
+function hideElements(param: string) {
+  const [header, footer] = returnPageElements();
+  let elementsToHide: NodeListOf<HTMLElement>;
+  if (param === 'header') {
+    elementsToHide = header.querySelectorAll('.interactive');
+  } else {
+    elementsToHide = footer.querySelectorAll('.interactive');
+  }
+  elementsToHide.forEach((element) => hideElement(element));
+}
+
+function showElements(param: string) {
+  const [header, footer] = returnPageElements();
+  let elementsToHide: NodeListOf<HTMLElement>;
+  if (param === 'header') {
+    elementsToHide = header.querySelectorAll('.interactive');
+  } else {
+    elementsToHide = footer.querySelectorAll('.interactive');
+  }
+  makeNodesVisible(elementsToHide);
+}
+
+function hideHeader() {
+  hideElements('header');
+}
+
+function showHeader() {
+  showElements('header');
+}
+
+function hideFooter() {
+  hideElements('footer');
+}
+
+function showFooter() {
+  showElements('footer');
+}
+
+export { hideHeader, showHeader, hideFooter, showFooter };

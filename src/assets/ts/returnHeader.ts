@@ -47,7 +47,7 @@ export default function returnHeader() {
 
   const description = headerObj.description;
   description.append(personalWrapper);
-  pageElements.header = headerObj.header;
+  pageElements.header = headerObj.section;
 
   return headerObj.section;
 }
