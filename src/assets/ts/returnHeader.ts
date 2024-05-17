@@ -7,7 +7,7 @@ import returnSectionObject from './common/returnSectionObject';
 import { pageElements } from './common/pageElements';
 
 export default function returnHeader() {
-  const headerObj = returnSectionObject({
+  const headerObject = returnSectionObject({
     tag: 'header',
     classes: ['header'],
     wrapperTag: 'article',
@@ -27,7 +27,7 @@ export default function returnHeader() {
     src: imgAvatar,
     attrib: [{ name: 'alt', value: 'А.Горбенко' }],
   });
-  headerObj.header.append(title, photo);
+  headerObject.header.append(title, photo);
 
   const personalWrapper = returnElement({
     tag: 'div',
@@ -39,15 +39,27 @@ export default function returnHeader() {
   const headerContacts = returnContacts();
   headerContacts.classList.add('header__contacts');
 
+  const menuBlock = returnElement({
+    tag: 'div',
+    classes: ['menu'],
+  });
+  const themeBtn = returnElement({
+    tag: 'div',
+    classes: ['theme-btn'],
+  });
+  menuBlock.append(themeBtn);
+  headerObject.description.append(menuBlock);
+
   personalWrapper.append(
     personalDescriptionText,
     headerSocials,
     headerContacts
   );
 
-  const description = headerObj.description;
+  const description = headerObject.description;
   description.append(personalWrapper);
-  pageElements.header = headerObj.section;
+  pageElements.header = headerObject.section;
+  pageElements.themeBtn = themeBtn;
 
-  return headerObj.section;
+  return headerObject.section;
 }

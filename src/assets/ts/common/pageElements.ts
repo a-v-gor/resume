@@ -8,6 +8,7 @@ const pageElements = {
   header: newElement(),
   skills: newElement(),
   footer: newElement(),
+  themeBtn: newElement(),
 };
 
 export { pageElements };
