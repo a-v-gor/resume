@@ -27,9 +27,8 @@ function setThemeToLocalStorage() {
 }
 
 function changeTheme() {
-  const result = theme === 'light' ? 'dark' : 'light';
-  theme = result;
-  console.log(theme);
+  const body = document.body;
+  body.classList.toggle('body_dark');
 }
 
 export { theme, setTheme, setThemeToLocalStorage, changeTheme };

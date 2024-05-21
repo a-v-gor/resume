@@ -10,13 +10,13 @@ export default function returnSocials() {
     classes: ['socials__title'],
     textContent: 'Социальные сети',
   });
-  const linkHabr = returnElement({
+  const linkLI = returnElement({
     tag: 'a',
     classes: ['socials__link', 'interactive'],
     attrib: [
       {
         name: 'href',
-        value: 'https://habr.com/ru/users/a-v-gor/',
+        value: 'https://www.linkedin.com/in/alexey-gorbenko',
       },
       {
         name: 'target',
@@ -24,9 +24,9 @@ export default function returnSocials() {
       },
     ],
   });
-  const iconHabr = returnElement({
+  const iconLi = returnElement({
     tag: 'div',
-    classes: ['socials__icon', 'socials__icon-habr'],
+    classes: ['socials__icon', 'socials__icon-li'],
   });
   const linkGH = returnElement({
     tag: 'a',
@@ -34,7 +34,7 @@ export default function returnSocials() {
     attrib: [
       {
         name: 'href',
-        value: 'https://github.com/a-v-gor',
+        value: 'https://www.github.com/a-v-gor',
       },
       {
         name: 'target',
@@ -65,9 +65,9 @@ export default function returnSocials() {
     classes: ['socials__icon', 'socials__icon-codewars'],
   });
 
-  linkHabr.append(iconHabr);
+  linkLI.append(iconLi);
   linkGH.append(iconGH);
   linkCW.append(iconCW);
-  socials.append(socialsTitle, linkHabr, linkGH, linkCW);
+  socials.append(socialsTitle, linkLI, linkGH, linkCW);
   return socials;
 }
