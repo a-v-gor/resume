@@ -1,6 +1,10 @@
 .body_dark {
   color: $dark-main-text-color;
 
+  .theme-btn {
+    background-image: url("../svg/icon-sun.svg");
+  }
+
   .personal {
     &__fname {
       color: $dark-title-color;
