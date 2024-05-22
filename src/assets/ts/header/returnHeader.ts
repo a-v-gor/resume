@@ -1,10 +1,11 @@
-import returnElement from './common/returnElement';
-import imgAvatar from '../img/avatar.jpg';
-import returnPersonalDescriptionText from './common/returnPersonalDescriptionText';
-import returnSocials from './common/returnSocials';
-import returnContacts from './common/returnContacts';
-import returnSectionObject from './common/returnSectionObject';
-import { pageElements } from './common/pageElements';
+import returnElement from '../common/returnElement';
+import imgAvatar from '../../img/avatar.jpg';
+import returnPersonalDescriptionText from '../common/returnPersonalDescriptionText';
+import returnSocials from '../common/returnSocials';
+import returnContacts from '../common/returnContacts';
+import returnSectionObject from '../common/returnSectionObject';
+import { pageElements } from '../common/pageElements';
+import { returnMenu } from './returnMenu';
 
 export default function returnHeader() {
   const headerObject = returnSectionObject({
@@ -39,16 +40,8 @@ export default function returnHeader() {
   const headerContacts = returnContacts();
   headerContacts.classList.add('header__contacts');
 
-  const menuBlock = returnElement({
-    tag: 'div',
-    classes: ['menu'],
-  });
-  const themeBtn = returnElement({
-    tag: 'div',
-    classes: ['theme-btn'],
-  });
-  menuBlock.append(themeBtn);
-  headerObject.description.append(menuBlock);
+  const menu = returnMenu();
+  headerObject.description.append(menu);
 
   personalWrapper.append(
     personalDescriptionText,
@@ -59,7 +52,6 @@ export default function returnHeader() {
   const description = headerObject.description;
   description.append(personalWrapper);
   pageElements.header = headerObject.section;
-  pageElements.themeBtn = themeBtn;
 
   return headerObject.section;
 }

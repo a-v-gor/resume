@@ -1,5 +1,5 @@
 import returnElement from './common/returnElement';
-import returnHeader from './returnHeader';
+import returnHeader from './header/returnHeader';
 import returnMain from './main/returnMain';
 import returnFooter from './returnFooter';
 
