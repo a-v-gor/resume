@@ -106,6 +106,7 @@ export default function returnPortfolioSection() {
     descriptionClasses: ['portfolio__description'],
     title: 'Портфолио',
     subitle: 'Выполненные проекты.',
+    id: 'portfolio',
   });
   const portfolioArticle = returnArticle(
     'Portfolio',

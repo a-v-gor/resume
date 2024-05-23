@@ -15,9 +15,13 @@ function makeElementInteractive(
       funcHide();
     }
   } else if (elem === pageElements.footer) {
-    if (domRect.top <= window.innerHeight / 2) {
+    const footerHeight = domRect.bottom - domRect.top;
+    if (domRect.top <= window.innerHeight - footerHeight / 2) {
       funcShow();
     } else if (domRect.top >= window.innerHeight) {
+      // if ((domRect.top <= window.innerHeight / 2) || domRect.bottom-1 <= window.innerHeight) {
+      //   funcShow();
+      // } else if (domRect.top >= window.innerHeight) {
       funcHide();
     }
   } else {

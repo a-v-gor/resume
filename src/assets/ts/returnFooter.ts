@@ -14,6 +14,7 @@ export default function returnFooter() {
     title: 'Контакты',
     subitle: 'Как со мной связаться.',
     descriptionClasses: ['contact-section__description'],
+    id: 'contacts',
   });
 
   const footerContacts = returnContacts();

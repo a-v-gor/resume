@@ -9,6 +9,7 @@ export default function returnEducationSection() {
     descriptionClasses: ['education__description'],
     title: 'Образование',
     subitle: 'Scio me nihil scire.',
+    id: 'education',
   });
   const list = returnElement({
     tag: 'ul',

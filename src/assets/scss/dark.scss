@@ -2,7 +2,13 @@
   color: $dark-main-text-color;
 
   .theme-btn {
+    background-color: $dark-socials-color;
     background-image: url("../svg/icon-sun.svg");
+
+    &:hover {
+      background-color: $dark-socials-color-active;
+      background-image: url("../svg/icon-sun-active.svg");
+    }
   }
 
   .personal {
@@ -97,6 +103,13 @@
 
   .article-li__position {
     color: $dark-title-color;
+  }
+
+  @media (width <= 1023px) {
+    & .header__header,
+    & .section__description {
+      background-color: $dark-section-even-descript-backgrnd-color;
+    }
   }
 }
 

@@ -54,6 +54,7 @@ export default function returnSkillsSection() {
     descriptionClasses: ['skills__description'],
     title: 'Компетенции',
     subitle: 'Профессиональные навыки.',
+    id: 'skills',
   });
 
   const skillsList = returnElement({

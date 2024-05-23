@@ -9,6 +9,7 @@ export default function returnExperienceSection() {
     descriptionClasses: ['experience__description'],
     title: 'Опыт',
     subitle: 'Per aspera ad astra.',
+    id: 'experience',
   });
 
   const list = returnElement({

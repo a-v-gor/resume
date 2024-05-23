@@ -9,6 +9,7 @@ interface Props {
   descriptionClasses?: string[];
   title?: string;
   subitle?: string;
+  id?: string;
 }
 
 interface resultObj {
@@ -61,11 +62,16 @@ export default function returnSectionObject(props: Props): resultObj {
     tag: 'div',
     classes: descriptionClasses,
   });
-  if (props.title !== undefined && props.subitle !== undefined) {
+  if (
+    props.title !== undefined &&
+    props.subitle !== undefined &&
+    props.id !== undefined
+  ) {
     const title = returnElement({
       tag: 'h2',
       classes: ['article-block__title', 'title'],
       textContent: props.title,
+      id: props.id,
     });
     const subtitle = returnElement({
       tag: 'p',

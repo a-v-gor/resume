@@ -32,6 +32,7 @@ export default function returnExpertiseSection() {
     headerClasses: ['article-block__header'],
     title: 'Компетенции',
     subitle: 'Профессиональные знания.',
+    id: 'expertise',
   });
   const list = returnElement({
     tag: 'ol',

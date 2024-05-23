@@ -7,6 +7,7 @@ export default function returnIntroSection() {
     headerClasses: ['article-block__header'],
     title: 'О себе',
     subitle: 'Ключевые компетенции.',
+    id: 'about',
   });
   sectionObj.description.innerHTML = `
     <p class="article-block__text">Начинающий front-end-разработчик. Хочу реализовать свой потенциал и приобретенные знания в продуктовой команде.</p>
