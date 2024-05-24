@@ -1,5 +1,6 @@
 .body_dark {
   color: $dark-main-text-color;
+  background-color: $dark-section-even-head-backgrnd-color;
 
   .theme-btn {
     background-color: $dark-socials-color;
@@ -104,33 +105,22 @@
   .article-li__position {
     color: $dark-title-color;
   }
-
-  @media (width <= 1023px) {
-    & .section__header {
-      background-color: $dark-hr-color;
-    }
-
-    & .header__header,
-    & .section__description {
-      background-color: $dark-section-even-descript-backgrnd-color;
-    }
-  }
 }
 
 .body_dark .section {
   &:nth-child(even) {
-    & .evolution-ul__article::before {
+    .evolution-ul__article::before {
       color: $dark-section-even-descript-backgrnd-color;
     }
 
     @media (width > 1023px) {
       background-image: linear-gradient(to left, $dark-section-even-descript-backgrnd-color 50%, $dark-section-even-head-backgrnd-color 50%);
 
-      & .section__header {
+      .section__header {
         background-color: $dark-section-even-head-backgrnd-color;
       }
 
-      & .section__description {
+      .section__description {
         background-color: $dark-section-even-descript-backgrnd-color;
       }
     }
@@ -152,6 +142,25 @@
       & .section__header {
         background-color: $dark-section-odd-head-backgrnd-color;
       }
+    }
+  }
+
+  @media (width <= 1023px) {
+    .section__header {
+      background-color: $dark-section-odd-head-backgrnd-mob-color;
+      border-color: $dark-hr-color;
+    }
+
+    .header__header {
+      background-color: $dark-section-even-descript-backgrnd-color;
+    }
+
+    .header__description {
+      background-color: $dark-section-even-descript-backgrnd-color;
+    }
+
+    .section__description {
+      background-color: $dark-section-even-descript-backgrnd-color;
     }
   }
 }
