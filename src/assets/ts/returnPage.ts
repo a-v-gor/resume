@@ -5,9 +5,8 @@ import returnFooter from './returnFooter';
 import { theme } from './theme/theme';
 
 export default function returnPage() {
-  const body: HTMLBodyElement = <HTMLBodyElement>(
-    document.getElementById('body')
-  );
+  const body = document.body;
+  body.classList.add('body');
   if (theme === 'dark') {
     body.classList.add('body_dark');
   }

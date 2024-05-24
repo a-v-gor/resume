@@ -120,6 +120,7 @@ html {
     }
 
     &__description {
+      position: static;
       width: 100%;
       background-color: $section-even-descript-backgrnd-color;
     }
@@ -202,4 +203,8 @@ html {
       letter-spacing: calc(-0.15em / 100);
     }
   }
+}
+
+.stop-scroll {
+  overflow: hidden;
 }

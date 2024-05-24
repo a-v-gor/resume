@@ -36,7 +36,7 @@ export default function returnExpertiseSection() {
   });
   const list = returnElement({
     tag: 'ol',
-    classes: ['rticle-block__ol', 'ord-list', 'list'],
+    classes: ['article-block__ol', 'ord-list', 'list'],
   });
 
   const itemHTML = returnListItem(

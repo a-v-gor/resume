@@ -1,11 +1,15 @@
+import { changeScrollBody } from '../changeScrollBody';
 import { pageElements } from '../common/pageElements';
 import returnElement from '../common/returnElement';
 
 function returnMenuElement(link: string, description: string) {
   const itemAbout = returnElement({
     tag: 'li',
-    classes: ['menu__item', 'interactive'],
+    classes: ['menu__item'],
   });
+  if (document.documentElement.clientWidth > 1023) {
+    itemAbout.classList.add('interactive');
+  }
 
   const linkAbout = returnElement({
     tag: 'a',
@@ -43,6 +47,8 @@ function returnMenu() {
     ],
   });
 
+  pageElements.menuCheckbox = inputCheckBox;
+
   const burgerButton = returnElement({
     tag: 'label',
     classes: ['menu__label'],
@@ -54,6 +60,8 @@ function returnMenu() {
     ],
   });
 
+  pageElements.menuBtn = burgerButton;
+
   const burgerIcon = returnElement({
     tag: 'span',
     classes: ['menu__icon'],
@@ -63,6 +71,8 @@ function returnMenu() {
     tag: 'ul',
     classes: ['menu__list', 'menu-list'],
   });
+
+  pageElements.menuList = navList;
 
   const itemIntro = returnMenuElement('about', 'О себе');
   const itemExpertise = returnMenuElement('expertise', 'Знания');
@@ -78,6 +88,13 @@ function returnMenu() {
   });
 
   pageElements.themeBtn = themeBtn;
+
+  const substrate = returnElement({
+    tag: 'div',
+    classes: ['menu__substrate'],
+  });
+
+  pageElements.substrate = substrate;
   navList.append(
     itemIntro,
     itemExpertise,
@@ -88,10 +105,16 @@ function returnMenu() {
     itemContacts
   );
   burgerButton.append(burgerIcon);
-  menu.append(inputCheckBox, burgerButton, navList);
+  menu.append(inputCheckBox, burgerButton, navList, substrate);
   menuWrapper.append(menu, themeBtn);
 
   return menuWrapper;
 }
 
-export { returnMenu };
+function closeBurgerMenu() {
+  const checkbox = <HTMLInputElement>pageElements.menuCheckbox;
+  checkbox.checked = false;
+  changeScrollBody();
+}
+
+export { returnMenu, closeBurgerMenu };

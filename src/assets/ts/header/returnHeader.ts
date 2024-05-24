@@ -5,7 +5,7 @@ import returnSocials from '../common/returnSocials';
 import returnContacts from '../common/returnContacts';
 import returnSectionObject from '../common/returnSectionObject';
 import { pageElements } from '../common/pageElements';
-import { returnMenu } from './returnMenu';
+import { returnMenu } from './menu';
 
 export default function returnHeader() {
   const headerObject = returnSectionObject({

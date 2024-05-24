@@ -9,6 +9,10 @@ const pageElements = {
   skills: newElement(),
   footer: newElement(),
   themeBtn: newElement(),
+  substrate: newElement(),
+  menuCheckbox: returnElement({ tag: 'input' }),
+  menuList: returnElement({ tag: 'ul' }),
+  menuBtn: newElement(),
 };
 
 export { pageElements };
