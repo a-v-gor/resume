@@ -106,6 +106,10 @@
   }
 
   @media (width <= 1023px) {
+    & .section__header {
+      background-color: $dark-hr-color;
+    }
+
     & .header__header,
     & .section__description {
       background-color: $dark-section-even-descript-backgrnd-color;

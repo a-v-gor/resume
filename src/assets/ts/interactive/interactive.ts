@@ -19,9 +19,6 @@ function makeElementInteractive(
     if (domRect.top <= window.innerHeight - footerHeight / 2) {
       funcShow();
     } else if (domRect.top >= window.innerHeight) {
-      // if ((domRect.top <= window.innerHeight / 2) || domRect.bottom-1 <= window.innerHeight) {
-      //   funcShow();
-      // } else if (domRect.top >= window.innerHeight) {
       funcHide();
     }
   } else {
