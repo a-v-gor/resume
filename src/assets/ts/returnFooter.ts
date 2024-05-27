@@ -1,43 +1,42 @@
-import { pageElements } from './common/pageElements';
-import returnContacts from './common/returnContacts';
 import returnElement from './common/returnElement';
-import returnPersonalDescriptionText from './common/returnPersonalDescriptionText';
-import returnSectionObject from './common/returnSectionObject';
-import returnSocials from './common/returnSocials';
 
 export default function returnFooter() {
-  const footerObject = returnSectionObject({
+  const footer = returnElement({
     tag: 'footer',
-    classes: ['footer', 'personal'],
-    wrapperClasses: ['article-block', 'contact-section'],
-    headerClasses: ['article-block__header', 'contact-section__header'],
-    title: 'Контакты',
-    subitle: 'Как со мной связаться.',
-    descriptionClasses: ['contact-section__description'],
-    id: 'contacts',
+    classes: ['footer'],
   });
 
-  const footerContacts = returnContacts();
-  footerContacts.classList.add('footer__contacts');
-  const footerArticle = returnElement({
-    tag: 'article',
-    classes: ['section__wrapper', 'personal'],
-  });
-  const footerArticleTitle = returnElement({
-    tag: 'h2',
-    classes: ['section__title'],
-    textContent: 'Personal info',
-  });
-  const personalWrapper = returnElement({
+  const copyrightString = '© А. Горбенко ' + new Date().getFullYear();
+
+  const copyright = returnElement({
     tag: 'div',
-    classes: ['personal__wrapper'],
+    classes: ['footer__copyright'],
+    textContent: copyrightString,
   });
-  const personalDescriptionText = returnPersonalDescriptionText();
-  const socials = returnSocials();
 
-  personalWrapper.append(personalDescriptionText, socials);
-  footerArticle.append(footerArticleTitle, personalWrapper);
-  footerObject.description.append(footerContacts, footerArticle);
-  pageElements.footer = footerObject.section;
-  return footerObject.section;
+  const copyrightDesign = returnElement({
+    tag: 'div',
+    classes: ['footer__copyright'],
+  });
+
+  const copyrightDesignLink = returnElement({
+    tag: 'a',
+    classes: ['footer__link', 'link'],
+    textContent: 'design: RuvenThemes',
+    attrib: [
+      {
+        name: 'href',
+        value: 'https://themeforest.net/user/ruventhemes',
+      },
+      {
+        name: 'target',
+        value: '_blank',
+      },
+    ],
+  });
+
+  copyrightDesign.append(copyrightDesignLink);
+  footer.append(copyright, copyrightDesign);
+
+  return footer;
 }
