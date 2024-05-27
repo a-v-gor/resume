@@ -4,10 +4,13 @@ function changeScrollBody() {
   const checkBox = <HTMLInputElement>pageElements.menuCheckbox;
   console.log(checkBox.checked);
 
-  if (!checkBox.checked && !document.body.classList.contains('stop-scroll')) {
-    document.body.classList.add('stop-scroll');
+  if (
+    !checkBox.checked &&
+    !document.body.classList.contains('body_stop-scroll')
+  ) {
+    document.body.classList.add('body_stop-scroll');
   } else {
-    document.body.classList.remove('stop-scroll');
+    document.body.classList.remove('body_stop-scroll');
   }
 }
 

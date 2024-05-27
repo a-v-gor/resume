@@ -7,6 +7,10 @@ html {
   font-family: $font;
   color: $main-text-color;
   letter-spacing: -0.02em;
+
+  &_stop-scroll {
+    overflow: hidden;
+  }
 }
 
 .body__title,
@@ -203,8 +207,4 @@ html {
       letter-spacing: calc(-0.15em / 100);
     }
   }
-}
-
-.stop-scroll {
-  overflow: hidden;
 }
