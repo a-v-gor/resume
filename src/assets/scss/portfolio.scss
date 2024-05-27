@@ -58,6 +58,7 @@
     width: 100%;
     padding: 2.7rem 2.4rem;
     color: $portfolio-font-color;
+    visibility: hidden;
     opacity: 0;
     transition: 0.6s;
   }
@@ -98,6 +99,7 @@
 
   &:hover {
     & .portfolio-article__wrapper {
+      visibility: visible;
       opacity: 1;
     }
 

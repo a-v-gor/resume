@@ -126,4 +126,8 @@
     top: 5.1rem;
     right: 11.6rem;
   }
+
+  @media (width <= 599px) {
+    left: 4.9rem;
+  }
 }
