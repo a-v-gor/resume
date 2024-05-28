@@ -12,6 +12,12 @@
     }
   }
 
+  .menu__icon,
+  .menu__icon::before,
+  .menu__icon::after {
+    background-color: $dark-title-color;
+  }
+
   .personal {
     &__fname {
       color: $dark-title-color;
