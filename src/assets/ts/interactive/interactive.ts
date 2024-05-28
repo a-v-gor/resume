@@ -15,17 +15,13 @@ function makeElementInteractive(
       funcHide();
     }
   } else if (elem === pageElements.footer) {
-    const footerHeight = domRect.bottom - domRect.top;
-    if (domRect.top <= window.innerHeight - footerHeight / 2) {
+    if (domRect.top <= window.innerHeight / 2) {
       funcShow();
     } else if (domRect.top >= window.innerHeight) {
       funcHide();
     }
   } else {
-    if (
-      (domRect.bottom < window.innerHeight && domRect.bottom > 0) ||
-      (domRect.top >= 0 && domRect.top <= window.innerHeight)
-    ) {
+    if (domRect.top <= window.innerHeight / 2 && domRect.bottom >= 0) {
       funcShow();
     } else {
       funcHide();
