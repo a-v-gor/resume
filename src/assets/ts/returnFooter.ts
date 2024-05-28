@@ -6,6 +6,11 @@ export default function returnFooter() {
     classes: ['footer'],
   });
 
+  const wrapper = returnElement({
+    tag: 'div',
+    classes: ['footer__wrapper', 'wrapper'],
+  });
+
   const copyrightString = '© А. Горбенко ' + new Date().getFullYear();
 
   const copyright = returnElement({
@@ -36,7 +41,8 @@ export default function returnFooter() {
   });
 
   copyrightDesign.append(copyrightDesignLink);
-  footer.append(copyright, copyrightDesign);
+  wrapper.append(copyright, copyrightDesign);
+  footer.append(wrapper);
 
   return footer;
 }

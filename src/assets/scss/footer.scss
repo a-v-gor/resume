@@ -1,8 +1,14 @@
 .footer {
-  display: flex;
-  justify-content: center;
   padding: 1rem 0;
   font-size: 1.6em;
-  column-gap: 2rem;
   background-color: $section-even-descript-backgrnd-color;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  @media (width <= 1023px) {
+    background-color: $hr-color;
+  }
 }

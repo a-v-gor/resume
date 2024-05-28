@@ -24,7 +24,7 @@ export default function returnSectionObject(props: Props): resultObj {
   let wrapperTag = 'section';
   let descriptionClasses = ['section__description', 'section__block'];
   let headerClasses = ['section__header', 'section__block'];
-  let wrapperClasses = ['section__wrapper'];
+  let wrapperClasses = ['section__wrapper', 'wrapper'];
   if (props.classes !== undefined) {
     classes = classes.concat(props.classes);
   }

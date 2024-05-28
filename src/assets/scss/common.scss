@@ -42,11 +42,6 @@ html {
 }
 
 .section {
-  &__wrapper {
-    display: flex;
-    margin: 0 auto;
-  }
-
   &__header {
     width: 30%;
   }
@@ -77,16 +72,16 @@ html {
   &:nth-child(odd) {
     background-image: linear-gradient(to right, $section-odd-head-backgrnd-color 50%, $section-odd-descript-backgrnd-color 50%);
 
-    & .evolution-ul__article::before {
+    .evolution-ul__article::before {
       color: $section-odd-descript-backgrnd-color;
     }
 
     @media (width > 1023px) {
-      & .section__description {
+      .section__description {
         background-color: $section-odd-descript-backgrnd-color;
       }
 
-      & .section__header {
+      .section__header {
         background-color: $section-odd-head-backgrnd-color;
       }
     }
@@ -95,10 +90,6 @@ html {
   @media (width >= 1200px) {
     &__block {
       padding: 6.1rem 7.35rem;
-    }
-
-    &__wrapper {
-      max-width: 127.6rem;
     }
   }
 
@@ -109,11 +100,6 @@ html {
   }
 
   @media (width <= 1023px) {
-    &__wrapper {
-      flex-direction: column;
-      align-items: center;
-    }
-
     &__header {
       width: 100%;
       padding-bottom: 5.2rem;
@@ -152,6 +138,21 @@ html {
       padding-top: 2.4rem;
       padding-bottom: 2.5rem;
     }
+  }
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (width >= 1200px) {
+    max-width: 127.6rem;
+  }
+
+  @media (width <= 1023px) {
+    flex-direction: column;
+    align-items: center;
   }
 }
 

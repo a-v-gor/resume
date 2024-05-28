@@ -5,7 +5,7 @@ import returnExpertiseSection from './returnExpertiseSection';
 import returnIntroSection from './returnIntroSection';
 import returnPortfolioSection from './returnPortfolioSection';
 import returnSkillsSection from './returnSkillsSection';
-import returnFooterSection from './returnFooterSection';
+import returnContactSection from './returnContactSection';
 
 export default function returnMain() {
   const main = returnElement({
@@ -18,7 +18,7 @@ export default function returnMain() {
   const experienceSection = returnExperienceSection();
   const educationSection = returnEducationSection();
   const portfolioSection = returnPortfolioSection();
-  const footerSection = returnFooterSection();
+  const footerSection = returnContactSection();
 
   main.append(
     introSection,

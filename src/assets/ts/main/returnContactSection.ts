@@ -5,8 +5,8 @@ import returnPersonalDescriptionText from '../common/returnPersonalDescriptionTe
 import returnSectionObject from '../common/returnSectionObject';
 import returnSocials from '../common/returnSocials';
 
-export default function returnFooterSection() {
-  const footerObject = returnSectionObject({
+export default function returnContactSection() {
+  const contactsSectionObject = returnSectionObject({
     wrapperClasses: ['article-block', 'contact-section', 'personal'],
     headerClasses: ['article-block__header', 'contact-section__header'],
     title: 'Контакты',
@@ -16,7 +16,7 @@ export default function returnFooterSection() {
   });
 
   const footerContacts = returnContacts();
-  footerContacts.classList.add('footer-main__contacts');
+  footerContacts.classList.add('contact-section__contacts');
   const footerArticle = returnElement({
     tag: 'article',
     classes: ['section__wrapper', 'personal'],
@@ -35,7 +35,7 @@ export default function returnFooterSection() {
 
   personalWrapper.append(personalDescriptionText, socials);
   footerArticle.append(footerArticleTitle, personalWrapper);
-  footerObject.description.append(footerContacts, footerArticle);
-  pageElements.footer = footerObject.section;
-  return footerObject.section;
+  contactsSectionObject.description.append(footerContacts, footerArticle);
+  pageElements.footer = contactsSectionObject.section;
+  return contactsSectionObject.section;
 }
