@@ -39,6 +39,10 @@
       align-items: center;
       width: 5rem;
       height: 5rem;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     &__list {
