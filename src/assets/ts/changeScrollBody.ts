@@ -2,9 +2,8 @@ import { pageElements } from './common/pageElements';
 
 function changeScrollBody() {
   const checkBox = <HTMLInputElement>pageElements.menuCheckbox;
-  console.log(checkBox.checked);
-
   if (
+    document.documentElement.clientWidth < 1024 &&
     !checkBox.checked &&
     !document.body.classList.contains('body_stop-scroll')
   ) {
